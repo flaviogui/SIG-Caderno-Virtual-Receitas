@@ -5,6 +5,7 @@ void tela_sobre(void);
 void tela_equipe(void);
 
 
+
 int main(void){
     tela_principal();
     tela_sobre();
@@ -17,8 +18,8 @@ void tela_principal(void){
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) MENU ALIMENTOS-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(3) MENU SOBRE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) MENU EQUIPE-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(3) MENU CHEFE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(6) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
