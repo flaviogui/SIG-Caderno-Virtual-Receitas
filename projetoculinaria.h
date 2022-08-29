@@ -67,4 +67,5 @@ printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
 printf("| ESTOQUE - Sempre bom verificar o que ainda tem né          |\n");
 printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
 printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
+printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 }
