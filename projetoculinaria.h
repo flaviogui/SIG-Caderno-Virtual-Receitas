@@ -3,13 +3,14 @@
 void tela_principal(void);
 void tela_sobre(void);
 void tela_equipe(void);
-
+void tela_infor(void);
 
 
 int main(void){
     tela_principal();
     tela_sobre();
     tela_equipe();
+    tela_infor();
     
     return 0;    
 }
@@ -19,7 +20,7 @@ printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) MENU ALIMENTOS-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(3) MENU CHEFE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(6) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
@@ -55,4 +56,15 @@ printf("| =-= Somos alunos do curso de Sistema de Informação - UFRN  |\n");
 printf("| -=- DATA DO INICIO DO PROJETO: 29/08/2022 -=-              |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 
+}
+
+void tela_infor(void) {
+printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+printf("| -=- -=- -=-     INFORMAÇÕES SOBRE CADA MENU     -=- -=- -=-|\n");
+printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
+printf("| RECEITAS - Podemos ver ou cadastrar novas receitas         |\n");
+printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
+printf("| ESTOQUE - Sempre bom verificar o que ainda tem né          |\n");
+printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
+printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
 }
