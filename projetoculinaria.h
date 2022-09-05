@@ -5,12 +5,16 @@ void tela_sobre(void);
 void tela_equipe(void);
 void tela_infor(void);
 
+void tela_menu_alimento(void);
+
 
 int main(void){
     tela_principal();
     tela_sobre();
     tela_equipe();
     tela_infor();
+    
+    tela_menu_alimento();
     
     return 0;    
 }
@@ -28,9 +32,7 @@ printf("|___________________________________________________________|\n");
 
 
 
-
 void tela_sobre(void) {
-printf("");
 printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf("| -=- -=- =-= -=-   INFORMAÇÃO DO PROJETO   -=- -=- -=- -=-   |\n");
 printf("|-------- CADERNO VIRTUAL DE RECEITAS CULINARIAS -----------  |\n");
@@ -47,7 +49,6 @@ printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 }
 
 void tela_equipe(void) {
-printf("");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n"); 
 printf("| -=- -=- =-=    INFORMACOES SOBRE A EQUIPE     -=- -=- -=-  |\n"); 
 printf("| -=- FLAVIO GLAYDSON G. LOPES  ----- MATRICULA: 20220046917 |\n");
@@ -68,4 +69,16 @@ printf("| ESTOQUE - Sempre bom verificar o que ainda tem né          |\n");
 printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
 printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+}
+
+void tela_menu_alimento(void){
+printf("|-=-=-=-             MENU ALIMENTO                 -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-(1) VERIFICAR ALIMENTOS-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(2) ADICIONAR ALIMENTO-=-=-=-=-=-=-=-==-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(3) EDITAR ALIMENTO-=-=-=-=-=-=--=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(4) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(4) VOLTAR AO MENU ANTERIOR-=-=-=-==-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|___________________________________________________________|\n");
+printf("Escolha uma opção: \n");
 }
