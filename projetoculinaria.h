@@ -8,6 +8,7 @@ void tela_infor(void);
 
 void tela_menu_alimento(void);
 void verificar_alimento(void);
+void cadastrar_alimento(void);
 
 
 int main(void){
@@ -18,6 +19,7 @@ int main(void){
     
     tela_menu_alimento();
     verificar_alimento();
+    cadastrar_alimento();
     
     return 0;    
 }
@@ -107,6 +109,18 @@ printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|PESQUISE PELO ALIMENTO DESEJADO E VEJA SE O MESMO ESTA     |\n");
 printf("|DISPONIVEL!                                                |\n");
 printf("|DIGITE O NOME DO ALIMENTO:                                 |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void cadastrar_alimento(void){
+system ("clear||cls ");
+printf("|-=-=-=-           CADASTRAR ALIMENTO              -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
