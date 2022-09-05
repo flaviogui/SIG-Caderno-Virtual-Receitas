@@ -9,6 +9,7 @@ void tela_infor(void);
 void tela_menu_alimento(void);
 void verificar_alimento(void);
 void cadastrar_alimento(void);
+void excluir_alimento(void);
 
 
 int main(void){
@@ -20,6 +21,7 @@ int main(void){
     tela_menu_alimento();
     verificar_alimento();
     cadastrar_alimento();
+    excluir_alimento();
     
     return 0;    
 }
@@ -92,8 +94,7 @@ system ("clear||cls ");
 printf("|-=-=-=-             MENU ALIMENTO                 -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) VERIFICAR ALIMENTOS-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) ADICIONAR ALIMENTO-=-=-=-=-=-=-=-==-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(3) EDITAR ALIMENTO-=-=-=-=-=-=--=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(3) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(4) LISTA DE ALIMENTOS-=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU INICIAL -=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
@@ -104,7 +105,7 @@ getchar();
 
 void verificar_alimento(void){
 system ("clear||cls ");
-printf("|-=-=-=-         VERIFICAÇÃO DE ALIMENTO           -=-=-=-=-|\n");
+printf("|-=-=-=          VERIFICAÇÃO DE ALIMENTO           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|PESQUISE PELO ALIMENTO DESEJADO E VEJA SE O MESMO ESTA     |\n");
 printf("|DISPONIVEL!                                                |\n");
@@ -121,6 +122,18 @@ printf("|-=-=-=-           CADASTRAR ALIMENTO              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void excluir_alimento(void){
+system ("clear||cls ");
+printf("|-=-=-=-           EXCLUIR ALIMENTO                -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|EXCLUA OS ALIMENTOS DESNECESSARIOS DA LISTA.               |\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
