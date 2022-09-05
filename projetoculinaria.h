@@ -10,6 +10,7 @@ void tela_menu_alimento(void);
 void verificar_alimento(void);
 void cadastrar_alimento(void);
 void excluir_alimento(void);
+void relatorio_alimentos(void);
 
 
 int main(void){
@@ -22,6 +23,7 @@ int main(void){
     verificar_alimento();
     cadastrar_alimento();
     excluir_alimento();
+    relatorio_alimentos();
     
     return 0;    
 }
@@ -134,6 +136,18 @@ printf("|-=-=-=-           EXCLUIR ALIMENTO                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|EXCLUA OS ALIMENTOS DESNECESSARIOS DA LISTA.               |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void relatorio_alimentos(void){
+system ("clear||cls ");
+printf("|-=-=-=-     RELATORIO DE TODOS OS ALIMENTOS       -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|AQUI SERA MOSTRADO TODOS OS ALIMENTOS CADASTRADOS COM O    |\n");
+printf("|OBJETIVO DE FACILITAR A SUA VIDA.                          |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
