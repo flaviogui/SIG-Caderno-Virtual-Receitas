@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include  <stdlib.h>
 
 void tela_principal(void);
 void tela_sobre(void);
@@ -20,6 +21,7 @@ int main(void){
 }
 
 void tela_principal(void){
+system ("clear||cls ");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) MENU ALIMENTOS-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -28,11 +30,13 @@ printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(6) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar();
 }
 
 
-
 void tela_sobre(void) {
+system ("clear||cls ");
 printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf("| -=- -=- =-= -=-   INFORMAÇÃO DO PROJETO   -=- -=- -=- -=-   |\n");
 printf("|-------- CADERNO VIRTUAL DE RECEITAS CULINARIAS -----------  |\n");
@@ -44,11 +48,14 @@ printf("|assim, o presente projeto propõe um sistema capaz de gerencia|\n");
 printf("|um conjunto de receitas culinárias, permitindo a busca por   |\n");
 printf("|pratos que contenham determinados ingredientes e a respectiva|\n");
 printf("|otimização dos estoques.                                     |\n");
-printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");                       
+printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                   \n");
+getchar();                       
 
 }
 
 void tela_equipe(void) {
+system ("clear||cls ");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n"); 
 printf("| -=- -=- =-=    INFORMACOES SOBRE A EQUIPE     -=- -=- -=-  |\n"); 
 printf("| -=- FLAVIO GLAYDSON G. LOPES  ----- MATRICULA: 20220046917 |\n");
@@ -56,10 +63,13 @@ printf("| -=- MATHEUS QUIRINO F. FIQUEIREDO - MATRICULA: 20220061520 |\n");
 printf("| =-= Somos alunos do curso de Sistema de Informação - UFRN  |\n");
 printf("| -=- DATA DO INICIO DO PROJETO: 29/08/2022 -=-              |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                  \n");
+getchar(); 
 
 }
 
 void tela_infor(void) {
+system ("clear||cls ");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf("| -=- -=- -=-     INFORMAÇÕES SOBRE CADA MENU     -=- -=- -=-|\n");
 printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
@@ -69,9 +79,12 @@ printf("| ESTOQUE - Sempre bom verificar o que ainda tem né          |\n");
 printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
 printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                  \n");
+getchar(); 
 }
 
 void tela_menu_alimento(void){
+system ("clear||cls ");
 printf("|-=-=-=-             MENU ALIMENTO                 -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) VERIFICAR ALIMENTOS-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) ADICIONAR ALIMENTO-=-=-=-=-=-=-=-==-=|\n");
@@ -81,4 +94,6 @@ printf("|-=-=-=-=-=-=-=-=-=(4) VOLTAR AO MENU ANTERIOR-=-=-=-==-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
 printf("Escolha uma opção: \n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
 }
