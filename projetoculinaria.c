@@ -95,6 +95,7 @@ getchar();
 }
 
 void tela_menu_alimento(void){
+char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU ALIMENTO                 -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) VERIFICAR ALIMENTOS-=-=-=-=-=-=-=-=-=|\n");
@@ -103,7 +104,8 @@ printf("|-=-=-=-=-=-=-=-=-=(3) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(4) LISTA DE ALIMENTOS-=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU INICIAL -=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
-printf("Escolha uma opção: \n");
+printf("Escolha uma opção:                                           \n");
+scanf ("%c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
