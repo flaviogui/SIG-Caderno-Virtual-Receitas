@@ -30,6 +30,7 @@ int main(void){
 }
 
 void tela_principal(void){
+char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-(1) MENU ALIMENTOS-=-=-=-=-=-=-=-=-=-=-=-|\n");
@@ -39,6 +40,8 @@ printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(6) SAIR -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
+printf("|Escolha a opcao desejada:                                  |\n");
+scanf (" %c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar();
 }
