@@ -82,7 +82,7 @@ getchar();
 void tela_infor(void) {
 system ("clear||cls ");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
-printf("| -=- -=- -=-     INFORMAÇÕES SOBRE CADA MENU     -=- -=- -=-|\n");
+printf("| -=- -=- -=-     INFORMACOES SOBRE CADA MENU     -=- -=- -=-|\n");
 printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
 printf("| RECEITAS - Podemos ver ou cadastrar novas receitas         |\n");
 printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
@@ -120,7 +120,7 @@ printf("|DISPONIVEL!                                                |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
 scanf("%s", &nome_alimento1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
@@ -142,13 +142,16 @@ getchar();
 }
 
 void excluir_alimento(void){
+char nome_alimento3[20];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR ALIMENTO                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|EXCLUA OS ALIMENTOS DESNECESSARIOS DA LISTA.               |\n");
-printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
+scanf("%s", &nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
