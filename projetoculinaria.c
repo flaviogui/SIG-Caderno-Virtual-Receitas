@@ -56,10 +56,10 @@ printf("|                                                             |\n");
 printf("|   Este e um programa desenvolvido para fabricas de produtos |\n");
 printf("|restaurantes, lanchonetes, padarias, ou ate mesmo usuarios   |\n");
 printf("|domesticos necessitam de receitas para conduzir a preparacao |\n");
-printf("|assim, o presente projeto propõe um sistema capaz de gerencia|\n"); 
+printf("|assim, o presente projeto propoe um sistema capaz de gerencia|\n"); 
 printf("|um conjunto de receitas culinarias, permitindo a busca por   |\n");
 printf("|pratos que contenham determinados ingredientes e a respectiva|\n");
-printf("|otimização dos estoques.                                     |\n");
+printf("|otimizacao dos estoques.                                     |\n");
 printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                   \n");
 getchar();                       
@@ -71,7 +71,7 @@ printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf("| -=- -=- =-=    INFORMACOES SOBRE A EQUIPE     -=- -=- -=-  |\n"); 
 printf("| -=- FLAVIO GLAYDSON G. LOPES  ----- MATRICULA: 20220046917 |\n");
 printf("| -=- MATHEUS QUIRINO F. FIQUEIREDO - MATRICULA: 20220061520 |\n");
-printf("| =-= Somos alunos do curso de Sistema de Informação - UFRN  |\n");
+printf("| =-= Somos alunos do curso de Sistema de Informacao - UFRN  |\n");
 printf("| -=- DATA DO INICIO DO PROJETO: 29/08/2022 -=-              |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                  \n");
@@ -86,7 +86,7 @@ printf("| -=- -=- -=-     INFORMAÇÕES SOBRE CADA MENU     -=- -=- -=-|\n");
 printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
 printf("| RECEITAS - Podemos ver ou cadastrar novas receitas         |\n");
 printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
-printf("| ESTOQUE - Sempre bom verificar o que ainda tem né          |\n");
+printf("| ESTOQUE - Sempre bom verificar o que ainda tem ne          |\n");
 printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
 printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
@@ -104,33 +104,39 @@ printf("|-=-=-=-=-=-=-=-=-=(3) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(4) LISTA DE ALIMENTOS-=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU INICIAL -=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
-printf("Escolha uma opção:                                           \n");
+printf("Escolha uma opcao:                                           \n");
 scanf ("%c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void verificar_alimento(void){
+char nome_alimento1[20];
 system ("clear||cls ");
-printf("|-=-=-=          VERIFICAÇÃO DE ALIMENTO           -=-=-=-=-|\n");
+printf("|-=-=-=          VERIFICACAO DE ALIMENTO           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|PESQUISE PELO ALIMENTO DESEJADO E VEJA SE O MESMO ESTA     |\n");
 printf("|DISPONIVEL!                                                |\n");
-printf("|DIGITE O NOME DO ALIMENTO:                                 |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
+scanf("%s", &nome_alimento1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void cadastrar_alimento(void){
+char nome_alimento2[20];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR ALIMENTO              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
-printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
+scanf("%s", &nome_alimento2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
