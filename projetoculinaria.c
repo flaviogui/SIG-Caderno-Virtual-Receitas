@@ -7,11 +7,12 @@ void tela_sobre(void);
 void tela_equipe(void);
 void tela_infor(void);
 
-void tela_menu_alimento(void);
+void tela_menu_ingredientes(void);
 void verificar_alimento(void);
 void cadastrar_alimento(void);
+void editar_alimentos(void);
 void excluir_alimento(void);
-void relatorio_alimentos(void);
+
 
 
 int main(void){
@@ -20,11 +21,12 @@ int main(void){
     tela_equipe();
     tela_infor();
     
-    tela_menu_alimento();
+    tela_menu_ingredientes();
     verificar_alimento();
     cadastrar_alimento();
+    editar_alimento();
     excluir_alimento();
-    relatorio_alimentos();
+    
     
     return 0;    
 }
@@ -94,15 +96,15 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                  \n");
 getchar(); 
 }
 
-void tela_menu_alimento(void){
+void tela_menu_ingredientes(void){
 char opcao;
 system ("clear||cls ");
-printf("|-=-=-=-             MENU ALIMENTO                 -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-(1) VERIFICAR ALIMENTOS-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(2) ADICIONAR ALIMENTO-=-=-=-=-=-=-=-==-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(3) EXCLUIR ALIMENTO-=-=-=-=-=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) LISTA DE ALIMENTOS-=-=-=-==-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU INICIAL -=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-             MENU INGREDIENTES             -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-(1) VERIFICAR INGREDIENTE-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(2) ADICIONAR INGREDIENTE-=-=-=-==-=-=-==-=|\n");
+printf("|-=-=-=-=-=-=-=-=(3) EDITAR INGREDIENTE-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(4) EXCLUIR INGREDIENTE -=-=-=-==-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("Escolha uma opcao:                                           \n");
 scanf ("%c", &opcao);
@@ -141,6 +143,21 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+void editar_alimento(void){
+char nome_alimento4[20];
+system ("clear||cls ");
+printf("|-=-=-=-              EDITAR ALIMENTO              -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR INGREDIENTES        |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
+scanf("%s", &nome_alimento4);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
 void excluir_alimento(void){
 char nome_alimento3[20];
 system ("clear||cls ");
@@ -156,14 +173,3 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
-void relatorio_alimentos(void){
-system ("clear||cls ");
-printf("|-=-=-=-     RELATORIO DE TODOS OS ALIMENTOS       -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|AQUI SERA MOSTRADO TODOS OS ALIMENTOS CADASTRADOS COM O    |\n");
-printf("|OBJETIVO DE FACILITAR A SUA VIDA.                          |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
-}
