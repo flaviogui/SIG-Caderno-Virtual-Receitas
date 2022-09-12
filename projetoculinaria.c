@@ -17,6 +17,7 @@ void tela_menu_receitas(void);
 void verificar_receitas(void);
 void cadastrar_receitas(void);
 void editar_receitas(void);
+void excluir_receitas(void);
 
 
 
@@ -36,6 +37,7 @@ int main(void){
     verificar_receitas();
     cadastrar_receitas();
     editar_receitas();
+    excluir_receitas();
     
     
     return 0;    
@@ -218,7 +220,7 @@ getchar();
 }
 
 void cadastrar_receitas(void){
-char codigo_receitas2[50];
+char codigo_receitas2[60];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR DE RECEITAS           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -233,7 +235,7 @@ getchar();
 }
 
 void editar_receitas(void){
-char codigo_receitas3[50];
+char codigo_receitas3[60];
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR RECEITA               -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -243,6 +245,21 @@ printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE SERA EDITADA:               |\n");
 scanf("%s", &codigo_receitas3);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void excluir_receitas(void){
+char codigo_receita4[20];
+system ("clear||cls ");
+printf("|-=-=-=-           EXCLUIR RECEITAS                -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|EXCLUA AQUI AS RECEITAS POR COMPLETO.                      |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O CODIGO DA RECEITA QUE SERA EXCLUIDA:              |\n");
+scanf("%s", &codigo_receita4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
