@@ -16,6 +16,7 @@ void excluir_alimento(void);
 void tela_menu_receitas(void);
 void verificar_receitas(void);
 void cadastrar_receitas(void);
+void editar_receitas(void);
 
 
 
@@ -34,6 +35,7 @@ int main(void){
     tela_menu_receitas();
     verificar_receitas();
     cadastrar_receitas();
+    editar_receitas();
     
     
     return 0;    
@@ -200,7 +202,7 @@ getchar();
 }
 
 void verificar_receitas(void){
-char nome_receitas1[20];
+char codigo_receitas1[20];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE RECEITAS           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -210,13 +212,13 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE DESEJA VERIFICAR:           |\n");
-scanf("%s", &nome_receitas1);
+scanf("%s", &codigo_receitas1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void cadastrar_receitas(void){
-char nome_receitas2[20];
+char codigo_receitas2[50];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR DE RECEITAS           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -225,7 +227,22 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA NOVA RECEITA:                           |\n");
-scanf("%s", &nome_receitas2);
+scanf("%s", &codigo_receitas2);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void editar_receitas(void){
+char codigo_receitas3[50];
+system ("clear||cls ");
+printf("|-=-=-=-              EDITAR RECEITA               -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR RECEITAS            |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O CODIGO DA RECEITA QUE SERA EDITADA:               |\n");
+scanf("%s", &codigo_receitas3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
