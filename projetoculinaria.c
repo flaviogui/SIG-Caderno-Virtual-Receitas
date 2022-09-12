@@ -14,6 +14,7 @@ void editar_alimentos(void);
 void excluir_alimento(void);
 
 void tela_menu_receitas(void);
+void verificar_receita(void);
 
 
 
@@ -30,6 +31,7 @@ int main(void){
     excluir_alimento();
 
     tela_menu_receitas();
+    verificar_receitas();
     
     
     return 0;    
@@ -100,6 +102,7 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                  \n");
 getchar(); 
 }
 
+// MENU INGREDIENTES
 void tela_menu_ingredientes(void){
 char opcao;
 system ("clear||cls ");
@@ -190,6 +193,22 @@ printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("Escolha uma opcao:                                           \n");
 scanf ("%c", &opcao2);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void verificar_receitas(void){
+char nome_receitas1[20];
+system ("clear||cls ");
+printf("|-=-=-=          VERIFICACAO DE RECEITAS           -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|PESQUISE PELA RECEITA DESEJADA E VEJA SE O MESMO ESTA      |\n");
+printf("|DISPONIVEL!                                                |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O CODIGO DA RECEITA QUE DESEJA VERIFICAR:           |\n");
+scanf("%s", &nome_receitas1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
