@@ -13,6 +13,8 @@ void cadastrar_alimento(void);
 void editar_alimentos(void);
 void excluir_alimento(void);
 
+void tela_menu_receitas(void);
+
 
 
 int main(void){
@@ -26,6 +28,8 @@ int main(void){
     cadastrar_alimento();
     editar_alimento();
     excluir_alimento();
+
+    tela_menu_receitas();
     
     
     return 0;    
@@ -173,3 +177,19 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// MENU RECEITAS
+void tela_menu_receitas(void){
+char opcao2;
+system ("clear||cls ");
+printf("|-=-=-=-        MENU DE RECEITAS CULINARIAS        -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-(1) VERIFICAR RECEITA-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(2) ADICIONAR RECEITA-=-=-=-=-=-==-=-=-==-=|\n");
+printf("|-=-=-=-=-=-=-=-=(3) EDITAR RECEITA-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(4) EXCLUIR RECEITA-=-=--=-=-=-==-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|___________________________________________________________|\n");
+printf("Escolha uma opcao:                                           \n");
+scanf ("%c", &opcao2);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
