@@ -10,11 +10,12 @@ void tela_infor(void);
 void tela_menu_ingredientes(void);
 void verificar_alimento(void);
 void cadastrar_alimento(void);
-void editar_alimentos(void);
+void editar_alimento(void);
 void excluir_alimento(void);
 
 void tela_menu_receitas(void);
-void verificar_receita(void);
+void verificar_receitas(void);
+void cadastrar_receitas(void);
 
 
 
@@ -32,6 +33,7 @@ int main(void){
 
     tela_menu_receitas();
     verificar_receitas();
+    cadastrar_receitas();
     
     
     return 0;    
@@ -209,6 +211,21 @@ printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE DESEJA VERIFICAR:           |\n");
 scanf("%s", &nome_receitas1);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void cadastrar_receitas(void){
+char nome_receitas2[20];
+system ("clear||cls ");
+printf("|-=-=-=-           CADASTRAR DE RECEITAS           -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|CADASTRE A SUA NOVA RECEITA AQUI                           |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O CODIGO DA NOVA RECEITA:                           |\n");
+scanf("%s", &nome_receitas2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
