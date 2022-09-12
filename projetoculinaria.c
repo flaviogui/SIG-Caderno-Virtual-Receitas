@@ -157,7 +157,7 @@ getchar();
 }
 
 void editar_alimento(void){
-char nome_alimento4[20];
+char nome_alimento3[20];
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR ALIMENTO              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -166,13 +166,13 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
-scanf("%s", &nome_alimento4);
+scanf("%s", &nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void excluir_alimento(void){
-char nome_alimento3[20];
+char nome_alimento4[20];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR ALIMENTO                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -181,7 +181,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
-scanf("%s", &nome_alimento3);
+scanf("%s", &nome_alimento4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
