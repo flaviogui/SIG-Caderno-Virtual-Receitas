@@ -21,6 +21,7 @@ void excluir_receitas(void);
 
 void tela_menu_chefe(void);
 void cadastrar_chefe(void);
+void verificar_chefe(void);
 
 
 
@@ -44,6 +45,7 @@ int main(void){
 
     tela_menu_chefe();
     cadastrar_chefe();
+    verificar_chefe();
     
     
     return 0;    
@@ -294,10 +296,26 @@ printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|CADASTRE AQUI O CHEFE(USUARIO) RESPONSAVEL PELA ELABORACAO |\n");
 printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO CHEFE:                                   |\n");
 scanf("%s", &nome_chefe);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void verificar_chefe(void){
+char email_chefe[30];
+system ("clear||cls ");
+printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|PESQUISE PELO CHEFE DESEJADA E VEJA SE O MESMO ESTA        |\n");
+printf("|CADASTRADO!                                                |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O EMAIL DO CHEFE QUE DESEJA VERIFICAR:              |\n");
+scanf("%s", &email_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
