@@ -22,6 +22,7 @@ void excluir_receitas(void);
 void tela_menu_chefe(void);
 void cadastrar_chefe(void);
 void verificar_chefe(void);
+void editar_chefe(void);
 
 
 
@@ -46,6 +47,7 @@ int main(void){
     tela_menu_chefe();
     cadastrar_chefe();
     verificar_chefe();
+    editar_chefe();
     
     
     return 0;    
@@ -315,6 +317,21 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE DESEJA VERIFICAR:              |\n");
+scanf("%s", &email_chefe);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void editar_chefe(void){
+char email_chefe[30];
+system ("clear||cls ");
+printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O EMAIL DO CHEFE QUE SERA EDITADO:                  |\n");
 scanf("%s", &email_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
