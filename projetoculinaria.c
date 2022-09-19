@@ -19,6 +19,8 @@ void cadastrar_receitas(void);
 void editar_receitas(void);
 void excluir_receitas(void);
 
+void tela_menu_chefe(void);
+
 
 
 int main(void){
@@ -38,6 +40,8 @@ int main(void){
     cadastrar_receitas();
     editar_receitas();
     excluir_receitas();
+
+    tela_menu_chefe();
     
     
     return 0;    
@@ -47,7 +51,7 @@ void tela_principal(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-(1) MENU ALIMENTOS-=-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-(1) MENU INGREDIENTES-=-=-==-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(3) MENU CHEFE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(4) MENU ESTOQUE-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
@@ -260,6 +264,23 @@ printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE SERA EXCLUIDA:              |\n");
 scanf("%s", &codigo_receita4);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+// MENU CHEFE
+void tela_menu_chefe(void){
+char opcao3;
+system ("clear||cls ");
+printf("|-=-=-=-         MENU CHEFE DE COZINHA             -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-(1) CADASTRAR CHEFE  -=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(2) VERIFICAR CHEFE  -=-=-=-=-=-==-=-=-==-=|\n");
+printf("|-=-=-=-=-=-=-=-=(3) EDITAR CHEFE  -=-=-=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(4) EXCLUIR CHEFE  -=-=--=-=-=-==-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|___________________________________________________________|\n");
+printf("Escolha uma opcao:                                           \n");
+scanf ("%c", &opcao3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
