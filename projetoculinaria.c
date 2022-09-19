@@ -20,6 +20,7 @@ void editar_receitas(void);
 void excluir_receitas(void);
 
 void tela_menu_chefe(void);
+void cadastrar_chefe(void);
 
 
 
@@ -42,6 +43,7 @@ int main(void){
     excluir_receitas();
 
     tela_menu_chefe();
+    cadastrar_chefe();
     
     
     return 0;    
@@ -281,6 +283,21 @@ printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("Escolha uma opcao:                                           \n");
 scanf ("%c", &opcao3);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void cadastrar_chefe(void){
+char nome_chefe[20];
+system ("clear||cls ");
+printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|CADASTRE AQUI O CHEFE(USUARIO) RESPONSAVEL PELA ELABORACAO |\n");
+printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|DIGITE O NOME DO CHEFE:                                   |\n");
+scanf("%s", &nome_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
