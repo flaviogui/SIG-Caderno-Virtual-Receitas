@@ -111,7 +111,7 @@ printf("| -=- -=- -=-     INFORMACOES SOBRE CADA MENU     -=- -=- -=-|\n");
 printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
 printf("| RECEITAS - Podemos ver ou cadastrar novas receitas         |\n");
 printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
-printf("| ESTOQUE - Sempre bom verificar o que ainda tem ne          |\n");
+printf("| CARDAPIO - Aqui voce fica sabendo de todos os pratos       |\n");
 printf("| RELATORIO - Aqui fica tudo registradinho                   |\n");
 printf("| SAIR - Hum, cheirinho de comida pronta                     |\n");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
