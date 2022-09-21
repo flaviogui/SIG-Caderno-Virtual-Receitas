@@ -2,29 +2,6 @@
 #include <stdio.h>
 #include  <stdlib.h>
 
-void tela_principal(void);
-void tela_sobre(void);
-void tela_equipe(void);
-void tela_infor(void);
-
-void tela_menu_ingredientes(void);
-void verificar_alimento(void);
-void cadastrar_alimento(void);
-void editar_alimento(void);
-void excluir_alimento(void);
-
-void tela_menu_receitas(void);
-void verificar_receitas(void);
-void cadastrar_receitas(void);
-void editar_receitas(void);
-void excluir_receitas(void);
-
-void tela_menu_chefe(void);
-void cadastrar_chefe(void);
-void verificar_chefe(void);
-void editar_chefe(void);
-void excluir_chefe(void);
-
 
 
 int main(void){
