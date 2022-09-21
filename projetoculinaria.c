@@ -3,7 +3,6 @@
 #include  <stdlib.h>
 
 
-
 int main(void){
     tela_principal();
     tela_sobre();
@@ -28,6 +27,9 @@ int main(void){
     editar_chefe();
     excluir_chefe();
     
+    tela_menu_cardapio();
+    
+
     return 0;    
 }
 
@@ -326,6 +328,23 @@ printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE SERA EXCLUIDO:                 |\n");
 scanf("%s", &email_chefe);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+// MENU CARDAPIO DIGITAL
+void tela_menu_cardapio(void){
+char opcao;
+system ("clear||cls ");
+printf("|-=-=-=-             MENU CARDAPIO DIGITAL         -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-(1) CAFE DA MANHA-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(2) ALMOCO-=-=-=-=-=-=-=--=-=-=-==-=-=-==-=|\n");
+printf("|-=-=-=-=-=-=-=-=(3) SOBREMESA-=-=-=-=--=-=-=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(4) JANTA-=-=-=-=-=-=-=--=-=-=-==-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|___________________________________________________________|\n");
+printf("Escolha uma opcao:                                           \n");
+scanf ("%c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
