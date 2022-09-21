@@ -32,6 +32,11 @@ int main(void){
     almoco();
     sobremesa();
     janta();
+
+    tela_menu_relatorios();
+    relatorio_ingredientes();
+    relatorio_receitas();
+    relatorio_chefe();
     
 
     return 0;    
@@ -46,7 +51,7 @@ printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(3) MENU CHEFE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(4) MENU CARDAPIO DIGITAL-=--=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(6) INFORMACOES DO PROJETO=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(6) INFORMACOES GERAIS-=-==-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) SAIR-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha a opcao desejada:                                  |\n");
@@ -92,7 +97,7 @@ void tela_infor(void) {
 system ("clear||cls ");
 printf("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
 printf("| -=- -=- -=-     INFORMACOES SOBRE CADA MENU     -=- -=- -=-|\n");
-printf("| MENU ALIMENTOS - Onde podemos ver alimentos disponiveis    |\n");
+printf("| MENU INGREDIENTES - Onde podemos ver alimentos disponiveis |\n");
 printf("| RECEITAS - Podemos ver ou cadastrar novas receitas         |\n");
 printf("| CHEFE - Ambiente destinado apenas ao chefe de cozinha      |\n");
 printf("| CARDAPIO - Aqui voce fica sabendo de todos os pratos       |\n");
@@ -123,7 +128,7 @@ getchar();
 void verificar_alimento(void){
 char nome_alimento1[20];
 system ("clear||cls ");
-printf("|-=-=-=          VERIFICACAO DE ALIMENTO           -=-=-=-=-|\n");
+printf("|-=-=-=          VERIFICACAO DE INGREDIENTE        -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|PESQUISE PELO ALIMENTO DESEJADO E VEJA SE O MESMO ESTA     |\n");
 printf("|DISPONIVEL!                                                |\n");
@@ -139,7 +144,7 @@ getchar();
 void cadastrar_alimento(void){
 char nome_alimento2[20];
 system ("clear||cls ");
-printf("|-=-=-=-           CADASTRAR ALIMENTO              -=-=-=-=-|\n");
+printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
 printf("|                                                           |\n");
@@ -154,7 +159,7 @@ getchar();
 void editar_alimento(void){
 char nome_alimento3[20];
 system ("clear||cls ");
-printf("|-=-=-=-              EDITAR ALIMENTO              -=-=-=-=-|\n");
+printf("|-=-=-=-              EDITAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR INGREDIENTES        |\n");
 printf("|                                                           |\n");
@@ -169,7 +174,7 @@ getchar();
 void excluir_alimento(void){
 char nome_alimento4[20];
 system ("clear||cls ");
-printf("|-=-=-=-           EXCLUIR ALIMENTO                -=-=-=-=-|\n");
+printf("|-=-=-=-           EXCLUIR INGREDIENTE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|EXCLUA OS ALIMENTOS DESNECESSARIOS DA LISTA.               |\n");
 printf("|                                                           |\n");
@@ -399,6 +404,62 @@ printf("|-=-=-=               HORA DA JANTA                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM COMIDA PARA O SEU |\n");
 printf("|JANTA!                                                     |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-(5) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+printf("|                                                           |\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+// MENU RELATORIO
+void tela_menu_relatorios(void){
+char opcao;
+system ("clear||cls ");
+printf("|-=-=-=-             MENU RELATORIO                -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-(1) RELATORIO DE TODOS OS INGREDIENTES-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(2) RELATORIO DE TODAS AS RECEITAS-=-=-=-==|\n");
+printf("|-=-=-=-=-=-=-=-=(3) RELATORIO DE TODOS OS CHEFES=-=-=-=-==-|\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|___________________________________________________________|\n");
+printf("|Escolha uma opcao:                                         | \n");
+scanf ("%c", &opcao);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void relatorio_ingredientes(void){
+system ("clear||cls ");
+printf("|-=-=-=       RELATORIO DE TODOS OS INGREDIENTES   -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|                                                           |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-(5) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+printf("|                                                           |\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void relatorio_receitas(void){
+system ("clear||cls ");
+printf("|-=-=-=       RELATORIO DE TODAS AS RECEITAS       -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|                                                           |\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-(5) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+printf("|                                                           |\n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+}
+
+void relatorio_chefe(void){
+system ("clear||cls ");
+printf("|-=-=-=       RELATORIO DE TODOS OS CHEFES         -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("|                                                           |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-(5) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
 printf("|                                                           |\n");
