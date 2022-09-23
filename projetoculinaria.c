@@ -1,6 +1,12 @@
 // VERSÃO 4 DO PROJETO
 #include <stdio.h>
 #include  <stdlib.h>
+#include "Assinaturas/assin_ingredientes.h"
+#include "Assinaturas/assin_receitas.h"
+#include "Assinaturas/assin_chefe.h"
+#include "Assinaturas/assin_cardapio.h"
+#include "Assinaturas/assin_relatorios.h"
+#include "Assinaturas/assin_informacao.h"
 
 
 int main(void){
