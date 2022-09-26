@@ -38,9 +38,10 @@ printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
 scanf ("%c", &opcao4);
+getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return opcao4;
-getchar(); 
+getchar();
+return opcao4; 
 }
 
 void cafe(void){
