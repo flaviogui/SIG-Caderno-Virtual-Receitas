@@ -2,6 +2,29 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_ingredientes.h"
+
+void moduloIngredientes(void){
+    char escolha;
+
+    do {
+        escolha = tela_menu_ingredientes();
+        switch(escolha) {
+            case '1':   verificar_alimento();
+                        break;
+            case '2':   cadastrar_alimento();
+                        break;
+            case '3':   editar_alimento();
+                        break;
+            case '4':   excluir_alimento();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_menu_ingredientes(void){
 char opcao;
 system ("clear||cls ");
@@ -19,7 +42,7 @@ return opcao;
 getchar(); 
 }
 
-void verificar_alimento(void){
+char verificar_alimento(void){
 char nome_alimento1[20];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE INGREDIENTE        -=-=-=-=-|\n");
@@ -32,10 +55,11 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
 scanf("%s", &nome_alimento1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+return nome_alimento1;
 getchar(); 
 }
 
-void cadastrar_alimento(void){
+char cadastrar_alimento(void){
 char nome_alimento2[20];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
@@ -47,10 +71,11 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
 scanf("%s", &nome_alimento2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+return nome_alimento2;
 getchar(); 
 }
 
-void editar_alimento(void){
+char editar_alimento(void){
 char nome_alimento3[20];
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR INGREDIENTE           -=-=-=-=-|\n");
@@ -62,10 +87,11 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
 scanf("%s", &nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+char nome_alimeto3;
 getchar(); 
 }
 
-void excluir_alimento(void){
+char excluir_alimento(void){
 char nome_alimento4[20];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR INGREDIENTE             -=-=-=-=-|\n");
@@ -77,5 +103,6 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
 scanf("%s", &nome_alimento4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+char nome_alimento4;
 getchar(); 
 }
