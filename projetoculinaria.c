@@ -7,6 +7,7 @@
 #include "Assinaturas/assin_chefe.h"
 #include "Assinaturas/assin_cardapio.h"
 #include "Assinaturas/assin_relatorios.h"
+#include "Assinaturas/assin_informacao.h"
 
 
 
@@ -26,7 +27,7 @@ int main(void){
                         break;
             case '5':   moduloRelatorio();
                         break;
-            case '6':   tela_informacoes();
+            case '6':   moduloInformacao();
                         break;
         } 	
     } while (opcao != '0');

@@ -2,6 +2,28 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_informacao.h"
+#include "../Assinaturas/menus.h"
+
+void moduloInformacao(void){
+    char escolha;
+
+    do {
+        escolha = tela_informacoes();
+        switch(escolha) {
+            case '1':   tela_sobre();
+                        break;
+            case '2':   tela_equipe();
+                        break;
+            case '3':   tela_infor();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_informacoes(void){
 char opcao;
 system ("clear||cls ");
@@ -14,9 +36,10 @@ printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
 scanf ("%c", &opcao);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return opcao;
 getchar(); 
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
+return opcao; 
 }
 
 void tela_sobre(void) {
