@@ -2,6 +2,30 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_chefe.h"
+#include "../Assinaturas/menus.h"
+
+void moduloChefe(void){
+    char escolha;
+
+    do {
+        escolha = tela_menu_chefe();
+        switch(escolha) {
+            case '1':   cadastrar_chefe();
+                        break;
+            case '2':   verificar_chefe();
+                        break;
+            case '3':   editar_chefe();
+                        break;
+            case '4':   excluir_chefe();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_menu_chefe(void){
 char opcao3;
 system ("clear||cls ");

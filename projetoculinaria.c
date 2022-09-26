@@ -4,6 +4,7 @@
 #include "Assinaturas/menus.h"
 #include "Assinaturas/assin_ingredientes.h"
 #include "Assinaturas/assin_receitas.h"
+#include "Assinaturas/assin_chefe.h"
 
 
 
@@ -17,7 +18,7 @@ int main(void){
                         break;
             case '2':   moduloReceitas();
                         break;
-            case '3':   tela_menu_chefe();
+            case '3':   moduloChefe();
                         break;
             case '4':   tela_menu_cardapio();
                         break;
