@@ -2,8 +2,32 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_cardapio.h"
+#include "../Assinaturas/menus.h"
+
+void moduloCardapio(void){
+    char escolha;
+
+    do {
+        escolha = tela_menu_cardapio();
+        switch(escolha) {
+            case '1':   cafe();
+                        break;
+            case '2':   almoco();
+                        break;
+            case '3':   sobremesa();
+                        break;
+            case '4':   janta();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_menu_cardapio(void){
-char opcao;
+char opcao4;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU CARDAPIO DIGITAL         -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-(1) CAFE DA MANHA-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -13,9 +37,9 @@ printf("|-=-=-=-=-=-=-=-=(4) JANTA-=-=-=-=-=-=-=--=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
-scanf ("%c", &opcao);
+scanf ("%c", &opcao4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return opcao;
+return opcao4;
 getchar(); 
 }
 
