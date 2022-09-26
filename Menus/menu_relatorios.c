@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_relatorios.h"
-void tela_menu_relatorios(void){
+char tela_menu_relatorios(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU RELATORIO                -=-=-=-=-|\n");
@@ -15,7 +15,8 @@ printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
 scanf ("%c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+getchar();
+return opcao; 
 }
 
 void relatorio_ingredientes(void){

@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_cardapio.h"
-void tela_menu_cardapio(void){
+char tela_menu_cardapio(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU CARDAPIO DIGITAL         -=-=-=-=-|\n");
@@ -15,6 +15,7 @@ printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
 scanf ("%c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+return opcao;
 getchar(); 
 }
 

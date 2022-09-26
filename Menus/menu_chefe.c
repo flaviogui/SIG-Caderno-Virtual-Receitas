@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_chefe.h"
-void tela_menu_chefe(void){
+char tela_menu_chefe(void){
 char opcao3;
 system ("clear||cls ");
 printf("|-=-=-=-         MENU CHEFE DE COZINHA             -=-=-=-=-|\n");
@@ -15,6 +15,7 @@ printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         |\n");
 scanf ("%c", &opcao3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+return opcao3;
 getchar(); 
 }
 

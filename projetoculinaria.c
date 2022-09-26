@@ -1,56 +1,37 @@
 // VERSÃO 4 DO PROJETO
 #include <stdio.h>
 #include  <stdlib.h>
-#include "Assinaturas/assin_ingredientes.h"
-#include "Assinaturas/assin_receitas.h"
-#include "Assinaturas/assin_chefe.h"
-#include "Assinaturas/assin_cardapio.h"
-#include "Assinaturas/assin_relatorios.h"
-#include "Assinaturas/assin_informacao.h"
+#include "Assinaturas/menus.h"
+
+
 
 
 int main(void){
-    tela_principal();
-    
-    tela_menu_ingredientes();
-    verificar_alimento();
-    cadastrar_alimento();
-    editar_alimento();
-    excluir_alimento();
+    char opcao;
 
-    tela_menu_receitas();
-    verificar_receitas();
-    cadastrar_receitas();
-    editar_receitas();
-    excluir_receitas();
+    do {
+        opcao = tela_principal();
+        switch(opcao) {
+            case '1':   tela_menu_ingredientes();
+                        break;
+            case '2':   tela_menu_receitas();
+                        break;
+            case '3':   tela_menu_chefe();
+                        break;
+            case '4':   tela_menu_cardapio();
+                        break;
+            case '5':   tela_menu_relatorios();
+                        break;
+            case '6':   tela_informacoes();
+                        break;
+        } 	
+    } while (opcao != '0');
 
-    tela_menu_chefe();
-    cadastrar_chefe();
-    verificar_chefe();
-    editar_chefe();
-    excluir_chefe();
-    
-    tela_menu_cardapio();
-    cafe();
-    almoco();
-    sobremesa();
-    janta();
-
-    tela_menu_relatorios();
-    relatorio_ingredientes();
-    relatorio_receitas();
-    relatorio_chefe();
-
-    tela_informacoes();
-    tela_sobre();
-    tela_equipe();
-    tela_infor();
-    
-
-    return 0;    
+    return 0;
 }
+    
 
-void tela_principal(void){
+char tela_principal(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
@@ -66,4 +47,5 @@ printf("|Escolha a opcao desejada:                                  |\n");
 scanf (" %c", &opcao);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar();
+return opcao;
 }

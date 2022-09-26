@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_receitas.h"
-void tela_menu_receitas(void){
+char tela_menu_receitas(void){
 char opcao2;
 system ("clear||cls ");
 printf("|-=-=-=-        MENU DE RECEITAS CULINARIAS        -=-=-=-=-|\n");
@@ -15,7 +15,8 @@ printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         |\n");
 scanf ("%c", &opcao2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+getchar();
+return opcao2;
 }
 
 void verificar_receitas(void){
