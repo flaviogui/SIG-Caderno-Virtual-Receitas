@@ -6,6 +6,7 @@
 #include "Assinaturas/assin_receitas.h"
 #include "Assinaturas/assin_chefe.h"
 #include "Assinaturas/assin_cardapio.h"
+#include "Assinaturas/assin_relatorios.h"
 
 
 
@@ -23,7 +24,7 @@ int main(void){
                         break;
             case '4':   moduloCardapio();
                         break;
-            case '5':   tela_menu_relatorios();
+            case '5':   moduloRelatorio();
                         break;
             case '6':   tela_informacoes();
                         break;

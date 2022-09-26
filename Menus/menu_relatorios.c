@@ -2,6 +2,28 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_relatorios.h"
+#include "../Assinaturas/menus.h"
+
+void moduloRelatorio(void){
+    char escolha;
+
+    do {
+        escolha = tela_menu_relatorios();
+        switch(escolha) {
+            case '1':   relatorio_ingredientes();
+                        break;
+            case '2':   relatorio_receitas();
+                        break;
+            case '3':   relatorio_chefe();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_menu_relatorios(void){
 char opcao;
 system ("clear||cls ");
@@ -14,6 +36,7 @@ printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         | \n");
 scanf ("%c", &opcao);
+getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar();
 return opcao; 
