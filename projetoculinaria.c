@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "Assinaturas/menus.h"
-
+#include "Assinaturas/assin_ingredientes.h"
 
 
 
@@ -12,7 +12,7 @@ int main(void){
     do {
         opcao = tela_principal();
         switch(opcao) {
-            case '1':   tela_menu_ingredientes();
+            case '1':   moduloIngredientes();
                         break;
             case '2':   tela_menu_receitas();
                         break;

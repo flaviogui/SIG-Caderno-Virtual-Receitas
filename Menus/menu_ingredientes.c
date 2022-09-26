@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_ingredientes.h"
+#include "../Assinaturas/menus.h"
 
 void moduloIngredientes(void){
     char escolha;
@@ -87,7 +88,7 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
 scanf("%s", &nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-char nome_alimeto3;
+return nome_alimento3;
 getchar(); 
 }
 
@@ -103,6 +104,6 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
 scanf("%s", &nome_alimento4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-char nome_alimento4;
+return nome_alimento4;
 getchar(); 
 }
