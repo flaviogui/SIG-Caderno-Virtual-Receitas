@@ -1,5 +1,5 @@
 void moduloIngredientes(void);
-char verificar_alimento(void);
-char cadastrar_alimento(void);
-char editar_alimento(void);
-char excluir_alimento(void);
+void verificar_alimento(void);
+void cadastrar_alimento(void);
+void editar_alimento(void);
+void excluir_alimento(void);

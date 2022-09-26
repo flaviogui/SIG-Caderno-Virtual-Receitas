@@ -43,7 +43,7 @@ return opcao;
 getchar(); 
 }
 
-char verificar_alimento(void){
+void verificar_alimento(void){
 char nome_alimento1[20];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE INGREDIENTE        -=-=-=-=-|\n");
@@ -56,11 +56,10 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
 scanf("%s", &nome_alimento1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return nome_alimento1;
 getchar(); 
 }
 
-char cadastrar_alimento(void){
+void cadastrar_alimento(void){
 char nome_alimento2[20];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
@@ -72,11 +71,10 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
 scanf("%s", &nome_alimento2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return nome_alimento2;
 getchar(); 
 }
 
-char editar_alimento(void){
+void editar_alimento(void){
 char nome_alimento3[20];
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR INGREDIENTE           -=-=-=-=-|\n");
@@ -88,11 +86,10 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
 scanf("%s", &nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return nome_alimento3;
 getchar(); 
 }
 
-char excluir_alimento(void){
+void excluir_alimento(void){
 char nome_alimento4[20];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR INGREDIENTE             -=-=-=-=-|\n");
@@ -104,6 +101,5 @@ printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
 scanf("%s", &nome_alimento4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-return nome_alimento4;
 getchar(); 
 }
