@@ -2,6 +2,30 @@
 #include <stdio.h>
 #include  <stdlib.h>
 #include "../Assinaturas/assin_receitas.h"
+#include "../Assinaturas/menus.h"
+
+void moduloReceitas(void){
+    char escolha;
+
+    do {
+        escolha = tela_menu_receitas();
+        switch(escolha) {
+            case '1':   verificar_receitas();
+                        break;
+            case '2':   cadastrar_receitas();
+                        break;
+            case '3':   editar_receitas();
+                        break;
+            case '4':   excluir_receitas();
+                        break;
+            case '5':   tela_principal();
+                        break;
+        } 	
+    } while (escolha != '0');
+
+
+}
+
 char tela_menu_receitas(void){
 char opcao2;
 system ("clear||cls ");
