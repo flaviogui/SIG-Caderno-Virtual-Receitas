@@ -55,7 +55,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE DESEJA VERIFICAR:           |\n");
-scanf("%s", &codigo_receitas1);
+scanf("%s", codigo_receitas1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -70,7 +70,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA NOVA RECEITA:                           |\n");
-scanf("%s", &codigo_receitas2);
+scanf("%s", codigo_receitas2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -85,7 +85,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE SERA EDITADA:               |\n");
-scanf("%s", &codigo_receitas3);
+scanf("%s", codigo_receitas3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -97,10 +97,10 @@ printf("|-=-=-=-           EXCLUIR RECEITAS                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|EXCLUA AQUI AS RECEITAS POR COMPLETO.                      |\n");
 printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O CODIGO DA RECEITA QUE SERA EXCLUIDA:              |\n");
-scanf("%s", &codigo_receita4);
+scanf("%s", codigo_receita4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
