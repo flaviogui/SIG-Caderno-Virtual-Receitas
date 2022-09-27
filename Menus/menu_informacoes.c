@@ -16,7 +16,7 @@ void moduloInformacao(void){
                         break;
             case '3':   tela_infor();
                         break;
-            case '5':   tela_principal();
+            case '0':   tela_principal();
                         break;
         } 	
     } while (escolha != '0');
@@ -32,13 +32,13 @@ printf("|-=-=-=-=-=--=-=-(1) INFORMACOES DO PROJETO-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=(2) INFORMACOES DA EQUIPE-=-=-=-=--=-=-=-==|\n");
 printf("|-=-=-=-=-=-=-=-=(3) INFORMACOES DE CADA MENU-=-==-=-=-=-==-|\n");
 printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
-printf("|Escolha uma opcao:                                         | \n");
-scanf ("%c", &opcao);
-getchar(); 
+printf("|Escolha uma opcao:                                         |\n");
+scanf ("%c", &opcao); 
+getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+getchar();
 return opcao; 
 }
 

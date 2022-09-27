@@ -18,7 +18,7 @@ void moduloIngredientes(void){
                         break;
             case '4':   excluir_alimento();
                         break;
-            case '5':   tela_principal();
+            case '0':   tela_principal();
                         break;
         } 	
     } while (escolha != '0');
@@ -34,13 +34,14 @@ printf("|-=-=-=-=-=--=-=-(1) VERIFICAR INGREDIENTE-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=(2) ADICIONAR INGREDIENTE-=-=-=-==-=-=-==-=|\n");
 printf("|-=-=-=-=-=-=-=-=(3) EDITAR INGREDIENTE-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=(4) EXCLUIR INGREDIENTE -=-=-=-==-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=(5) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         |\n");
 scanf ("%c", &opcao);
+getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar();
 return opcao;
-getchar(); 
 }
 
 void verificar_alimento(void){
@@ -51,7 +52,7 @@ printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|PESQUISE PELO ALIMENTO DESEJADO E VEJA SE O MESMO ESTA     |\n");
 printf("|DISPONIVEL!                                                |\n");
 printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
 scanf("%s", &nome_alimento1);
@@ -66,7 +67,7 @@ printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
 printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
 scanf("%s", &nome_alimento2);
@@ -81,7 +82,7 @@ printf("|-=-=-=-              EDITAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR INGREDIENTES        |\n");
 printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
 scanf("%s", &nome_alimento3);
