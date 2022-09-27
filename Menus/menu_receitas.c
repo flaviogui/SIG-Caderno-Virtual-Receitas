@@ -38,6 +38,7 @@ printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha uma opcao:                                         |\n");
 scanf ("%c", &opcao2);
+getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar();
 return opcao2;

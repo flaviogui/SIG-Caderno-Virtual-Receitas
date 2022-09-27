@@ -50,7 +50,7 @@ printf("|-=-=-=-=-=-=-=-=-=(0) SAIR-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha a opcao desejada:                                  |\n");
 scanf (" %c", &opcao);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar();
+printf( " \t\t\t >>>         /// AGUARDE ///                      >>>\n");
 return opcao;
+getchar();
 }

@@ -36,7 +36,7 @@ printf("|-=-=-=-=-=-=-=-=(3) SOBREMESA-=-=-=-=--=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=(4) JANTA-=-=-=-=-=-=-=--=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
-printf("|Escolha uma opcao:                                         | \n");
+printf("|Escolha uma opcao:                                         |\n");
 scanf ("%c", &opcao4);
 getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
