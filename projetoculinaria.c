@@ -1,6 +1,6 @@
 // VERSÃO 5 DO PROJETO
 #include <stdio.h>
-#include  <stdlib.h>
+#include <stdlib.h>
 #include "Assinaturas/menus.h"
 #include "Assinaturas/assin_ingredientes.h"
 #include "Assinaturas/assin_receitas.h"
@@ -50,7 +50,8 @@ printf("|-=-=-=-=-=-=-=-=-=(0) SAIR-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha a opcao desejada:                                  |\n");
 scanf (" %c", &opcao);
-printf( " \t\t\t >>>         /// AGUARDE ///                      >>>\n");
-return opcao;
 getchar();
+printf( " \t\t\t >>>  /// Aperte ENTER ///                           \n");
+getchar();
+return opcao;
 }
