@@ -29,6 +29,10 @@ int main(void){
                         break;
             case '6':   moduloInformacao();
                         break;
+            case '0':   printf("Fim de Programa!");
+                        break;
+            default:    printf("Opcao invalida!");
+                        break;
         } 	
     } while (opcao != '0');
 

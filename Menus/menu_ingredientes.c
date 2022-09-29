@@ -55,7 +55,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
-scanf("%s", &nome_alimento1);
+scanf("%s", nome_alimento1);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -70,7 +70,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
-scanf("%s", &nome_alimento2);
+scanf("%s", nome_alimento2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -85,7 +85,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO INGREDIENTE QUE SERA MODIFICADO:          |\n");
-scanf("%s", &nome_alimento3);
+scanf("%s", nome_alimento3);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -100,7 +100,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE SERA EXCLUIDO:               |\n");
-scanf("%s", &nome_alimento4);
+scanf("%s", nome_alimento4);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
