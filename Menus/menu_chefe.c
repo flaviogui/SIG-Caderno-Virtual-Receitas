@@ -18,8 +18,7 @@ void moduloChefe(void){
                         break;
             case '4':   excluir_chefe();
                         break;
-            case '0':   tela_principal();
-                        break;
+           
         } 	
     } while (escolha != '0');
 
@@ -54,7 +53,7 @@ printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO CHEFE:                                   |\n");
-scanf("%s", &nome_chefe);
+scanf("%s", nome_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -70,7 +69,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE DESEJA VERIFICAR:              |\n");
-scanf("%s", &email_chefe);
+scanf("%s", email_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -85,7 +84,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE SERA EDITADO:                  |\n");
-scanf("%s", &email_chefe);
+scanf("%s", email_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
@@ -100,7 +99,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE SERA EXCLUIDO:                 |\n");
-scanf("%s", &email_chefe);
+scanf("%s", email_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }

@@ -18,8 +18,7 @@ void moduloIngredientes(void){
                         break;
             case '4':   excluir_alimento();
                         break;
-            case '0':   tela_principal();
-                        break;
+            
         } 	
     } while (escolha != '0');
 

@@ -18,8 +18,7 @@ void moduloReceitas(void){
                         break;
             case '4':   excluir_receitas();
                         break;
-            case '0':   tela_principal();
-                        break;
+            
         } 	
     } while (escolha != '0');
 

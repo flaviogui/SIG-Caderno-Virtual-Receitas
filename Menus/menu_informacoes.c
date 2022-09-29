@@ -16,8 +16,7 @@ void moduloInformacao(void){
                         break;
             case '3':   tela_infor();
                         break;
-            case '0':   tela_principal();
-                        break;
+            
         } 	
     } while (escolha != '0');
 

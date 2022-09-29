@@ -18,8 +18,7 @@ void moduloCardapio(void){
                         break;
             case '4':   janta();
                         break;
-            case '0':   tela_principal();
-                        break;
+            
         } 	
     } while (escolha != '0');
 
