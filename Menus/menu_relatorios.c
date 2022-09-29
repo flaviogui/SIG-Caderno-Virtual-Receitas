@@ -16,8 +16,7 @@ void moduloRelatorio(void){
                         break;
             case '3':   relatorio_chefe();
                         break;
-            case '0':   tela_principal();
-                        break;
+            
         } 	
     } while (escolha != '0');
 
