@@ -1,4 +1,4 @@
-// VERSÃO 5 DO PROJETO
+// VERSÃO 6 DO PROJETO
 #include <stdio.h>
 #include <stdlib.h>
 #include "Assinaturas/menus.h"
@@ -29,8 +29,10 @@ int main(void){
                         break;
             case '6':   moduloInformacao();
                         break;
+            
         }    
     } while (opcao != '0');
+    
 
     return 0;
 }
