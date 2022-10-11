@@ -1,4 +1,4 @@
-// VERSÃO 6 DO PROJETO
+// VERSÃO 7 DO PROJETO
 #include <stdio.h>
 #include <stdlib.h>
 #include "Assinaturas/menus.h"
