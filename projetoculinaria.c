@@ -40,12 +40,11 @@ char tela_principal(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-(1) MENU CHEFE-=-=-==-=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-(1) MENU CHEFE-=-=-==-=-=-=-=-=-=--=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(3) MENU CHEFE-=-=-=-=-=-=-=-=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) MENU CARDAPIO DIGITAL-=--=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(6) INFORMACOES GERAIS-=-==-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(3) MENU CARDAPIO DIGITAL-=--=-=-=-=-=-=-|\n");
+printf("|-=-=-=-=-=-=-=-=-=(4) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=-=(5) INFORMACOES GERAIS-=-==-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) SAIR-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha a opcao desejada:                                  |\n");
