@@ -39,13 +39,14 @@ int main(void){
 char tela_principal(void){
 char opcao;
 system ("clear||cls ");
+printf("__________________________________/ 12 /  10  / 22 /_________\n");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-(1) MENU CHEFE-=-=-==-=-=-=-=-=-=--=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(2) MENU RECEITAS-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(3) MENU CARDAPIO DIGITAL-=--=-=-=-=-=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=-=(4) MENU RELATORIOS-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(5) INFORMACOES GERAIS-=-==-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) SAIR-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|------------------(1) MENU CHEFE---------------------------|\n");
+printf("|------------------(2) MENU RECEITAS------------------------|\n");
+printf("|------------------(3) MENU CARDAPIO DIGITAL----------------|\n");
+printf("|------------------(4) MENU RELATORIOS----------------------|\n");
+printf("|------------------(5) INFORMACOES GERAIS-------------------|\n");
+printf("|------------------(0) SAIR---------------------------------|\n");
 printf("|___________________________________________________________|\n");
 printf("|Escolha a opcao desejada:                                  |\n");
 scanf (" %c", &opcao);
