@@ -39,7 +39,8 @@ int main(void){
 char tela_principal(void){
 char opcao;
 system ("clear||cls ");
-printf("__________________________________/ 12 /  10  / 22 /_________\n");
+printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
+printf("|                                                           |\n");
 printf("|-=-=-=-BEM VINDO AO CADERNO ELETRONICO DE RECEITAS-=-=-=-=-|\n");
 printf("|------------------(1) MENU CHEFE---------------------------|\n");
 printf("|------------------(2) MENU RECEITAS------------------------|\n");
