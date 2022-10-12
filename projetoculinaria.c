@@ -17,17 +17,15 @@ int main(void){
     do {
         opcao = tela_principal();
         switch(opcao) {
-            case '1':   moduloIngredientes();
+            case '1':   moduloChefe();
                         break;
             case '2':   moduloReceitas();
                         break;
-            case '3':   moduloChefe();
+            case '3':   moduloCardapio();
                         break;
-            case '4':   moduloCardapio();
+            case '4':   moduloRelatorio();
                         break;
-            case '5':   moduloRelatorio();
-                        break;
-            case '6':   moduloInformacao();
+            case '5':   moduloInformacao();
                         break;
             
         }    
