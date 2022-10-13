@@ -10,9 +10,9 @@ void moduloIngredientes(void){
     do {
         escolha = tela_menu_ingredientes();
         switch(escolha) {
-            case '1':   verificar_alimento();
+            case '1':   cadastrar_alimento();
                         break;
-            case '2':   cadastrar_alimento();
+            case '2':   verificar_alimento();
                         break;
             case '3':   editar_alimento();
                         break;
@@ -29,8 +29,8 @@ char tela_menu_ingredientes(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU INGREDIENTES             -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-(1) VERIFICAR INGREDIENTE-=-=-=-=-=-=-=-=-=|\n");
-printf("|-=-=-=-=-=-=-=-=(2) ADICIONAR INGREDIENTE-=-=-=-==-=-=-==-=|\n");
+printf("|-=-=-=-=-=--=-=-(1) ADICIONAR INGREDIENTE-=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=-=-=-=-=(2) VERIFICAR INGREDIENTE-=-=-=-==-=-=-==-=|\n");
 printf("|-=-=-=-=-=-=-=-=(3) EDITAR INGREDIENTE-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|-=-=-=-=-=-=-=-=(4) EXCLUIR INGREDIENTE -=-=-=-==-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
@@ -41,6 +41,25 @@ getchar();
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar();
 return opcao;
+}
+
+
+void cadastrar_alimento(void){
+char nome_alimento2[20];
+char id_receita[3];
+system ("clear||cls ");
+printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
+printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
+printf("|                                                           |\n");
+printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
+printf("|                                                           |\n");
+printf("DIGITE O ID DA RECEITA QUE OS INGREDIENTES SERAO ADICIONADOS \n");
+scanf("%s", id_receita);
+printf("DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:               \n");
+scanf("%s", nome_alimento2);
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+getchar(); 
 }
 
 void verificar_alimento(void){
@@ -55,21 +74,6 @@ printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O NOME DO ALIMENTO QUE DESEJA VERIFICAR:            |\n");
 scanf("%s", nome_alimento1);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
-}
-
-void cadastrar_alimento(void){
-char nome_alimento2[20];
-system ("clear||cls ");
-printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
-printf("|DIGITE O NOME DO ALIMENTO QUE SERA ADICIONADO:             |\n");
-scanf("%s", nome_alimento2);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
