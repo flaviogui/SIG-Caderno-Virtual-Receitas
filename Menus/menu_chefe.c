@@ -44,7 +44,10 @@ return opcao3;
 }
 
 void cadastrar_chefe(void){
+char id_chefe[3];
 char nome_chefe[20];
+char email_chefe[30];
+char cel_chefe[12];
 system ("clear||cls ");
 printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -52,8 +55,16 @@ printf("|CADASTRE AQUI O CHEFE(USUARIO) RESPONSAVEL PELA ELABORACAO |\n");
 printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O NOME DO CHEFE:                                   |\n");
+printf("DIGITE O NOME DO CHEFE:                                      \n");
 scanf("%s", nome_chefe);
+printf("DIGITE O EMAIL DO CHEFE:                                     \n");
+scanf("%s", email_chefe);
+printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
+scanf("%s", cel_chefe);
+printf("DIGITE O ID DO CHEFE:                                        \n");
+scanf("%s", id_chefe);
+getchar();
+printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
