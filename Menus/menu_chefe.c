@@ -70,7 +70,7 @@ getchar();
 }
 
 void verificar_chefe(void){
-char email_chefe[30];
+char id_chefe[3];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -80,13 +80,13 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE DESEJA VERIFICAR:              |\n");
-scanf("%s", email_chefe);
+scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void editar_chefe(void){
-char email_chefe[30];
+char id_chefe[30];
 system ("clear||cls ");
 printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -95,13 +95,13 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE SERA EDITADO:                  |\n");
-scanf("%s", email_chefe);
+scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void excluir_chefe(void){
-char email_chefe[30];
+char id_chefe[30];
 system ("clear||cls ");
 printf("|-=-=-=-              EXCLUIR CHEFE                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -110,7 +110,7 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 printf("|DIGITE O EMAIL DO CHEFE QUE SERA EXCLUIDO:                 |\n");
-scanf("%s", email_chefe);
+scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
