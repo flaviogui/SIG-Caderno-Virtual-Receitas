@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include "Assinaturas/menus.h"
 #include "Assinaturas/assin_ingredientes.h"
-#include "Assinaturas/assin_receitas.h"
 #include "Assinaturas/assin_chefe.h"
 #include "Assinaturas/assin_cardapio.h"
 #include "Assinaturas/assin_relatorios.h"
@@ -19,7 +18,7 @@ int main(void){
         switch(opcao) {
             case '1':   moduloChefe();
                         break;
-            case '2':   moduloReceitas();
+            case '2':   moduloReceita();
                         break;
             case '3':   moduloCardapio();
                         break;

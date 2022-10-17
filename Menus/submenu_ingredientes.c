@@ -8,7 +8,7 @@ void moduloIngredientes(void){
     char escolha;
 
     do {
-        escolha = tela_menu_ingredientes();
+        escolha = tela_submenu_ingredientes();
         switch(escolha) {
             case '1':   cadastrar_alimento();
                         break;
@@ -25,7 +25,7 @@ void moduloIngredientes(void){
 
 }
 
-char tela_menu_ingredientes(void){
+char tela_submenu_ingredientes(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-             MENU INGREDIENTES             -=-=-=-=-|\n");
