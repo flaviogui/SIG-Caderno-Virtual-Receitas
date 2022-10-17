@@ -59,6 +59,7 @@ printf("|DIGITE O ID DA RECEITA:                                    |\n");
 scanf("%s",id_receita);
 printf("|DIGITE O MODO DE PREPARO DA RECEITA:                       |\n");
 scanf("%s",modo_preparo);
+getchar();
 printf( " \t\t\t >>> MODO DE PREPARO CADASTRADO COM SUCESSO!!!       \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 

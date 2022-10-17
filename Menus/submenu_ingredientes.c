@@ -73,6 +73,7 @@ printf("DIGITE A QUANTIDADE DE PORCOES DO PRATO:                     \n");
 scanf("%s", porcoes);
 printf("AGORA DIGITE OS INGREDIENTES PRESENTES NA RECEITA:           \n");
 scanf("%s", ingredientes);
+getchar();
 printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
