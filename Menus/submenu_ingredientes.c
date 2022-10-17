@@ -61,6 +61,7 @@ printf("AGORA, DIGITE O ID DA RECEITA:                               \n");
 scanf("%s", id_receita);
 printf("AGORA DIGITE OS INGREDIENTES PRESENTES NA RECEITA:           \n");
 scanf("%s", ingredientes);
+printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
