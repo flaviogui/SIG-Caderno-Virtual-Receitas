@@ -46,62 +46,65 @@ return opcao2;
 
 
 void cadastrar_modo(void){
-char codigo_receitas2[60];
+char id_receita[4];
+char modo_preparo[800];
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR MODO DE PREPARO       -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|CADASTRE A SUA NOVA RECEITA AQUI                           |\n");
+printf("|CADASTRE AQUI SEU MODO DE PREPARO NA SUA RECEITA           |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O CODIGO DA NOVA RECEITA:                           |\n");
-scanf("%s", codigo_receitas2);
+printf("|DIGITE O ID DA RECEITA:                                    |\n");
+scanf("%s",id_receita);
+printf("|DIGITE O MODO DE PREPARO DA RECEITA:                       |\n");
+scanf("%s",modo_preparo);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void verificar_modo(void){
-char codigo_receitas1[20];
+char id_receita[4];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE MODO DE PREPARO    -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|PESQUISE PELA RECEITA DESEJADA E VEJA SE O MESMO ESTA      |\n");
-printf("|DISPONIVEL!                                                |\n");
+printf("|PESQUISE PELO MODO DE PREPARO DESEJADO E VEJA SE O MESMO   |\n");
+printf("|ESTA DISPONIVEL!                                           |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O CODIGO DA RECEITA QUE DESEJA VERIFICAR:           |\n");
-scanf("%s", codigo_receitas1);
+printf("|DIGITE O ID DA RECEITA QUE DESEJA VERIFICAR:           |\n");
+scanf("%s", id_receita);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void editar_modo(void){
-char codigo_receitas3[60];
+char id_receita[4];
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR MODO DE PREPARO       -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR RECEITAS            |\n");
+printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR O MODO DE PREPARO   |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O CODIGO DA RECEITA QUE SERA EDITADA:               |\n");
-scanf("%s", codigo_receitas3);
+printf("|DIGITE O ID DA RECEITA QUE SERA EDITADA:               |\n");
+scanf("%s", id_receita);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void excluir_modo(void){
-char codigo_receita4[20];
+char id_receita[4];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR MODO DE PREPARO         -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|EXCLUA AQUI AS RECEITAS POR COMPLETO.                      |\n");
+printf("|EXCLUA AQUI O MODO DE PREPARO POR COMPLETO.                      |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O CODIGO DA RECEITA QUE SERA EXCLUIDA:              |\n");
-scanf("%s", codigo_receita4);
+printf("|DIGITE O ID DA RECEITA QUE SERA EXCLUIDA:              |\n");
+scanf("%s", id_receita);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }

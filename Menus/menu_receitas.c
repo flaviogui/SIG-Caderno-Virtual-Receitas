@@ -10,11 +10,11 @@ void moduloReceita(void){
     do {
         escolha = tela_receitas();
         switch(escolha) {
-            case '1':   modoPreparo();
+            case '1':   moduloInforReceita();
                         break;
             case '2':   moduloIngredientes();
                         break;
-            case '3':   moduloIngredientes();
+            case '3':   modoPreparo();
                         break;
             
         } 	
