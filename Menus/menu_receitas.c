@@ -10,7 +10,7 @@ void moduloReceita(void){
     do {
         escolha = tela_receitas();
         switch(escolha) {
-            case '1':   moduloInforReceita();
+            case '1':   moduloIngredientes();
                         break;
             case '2':   moduloIngredientes();
                         break;
