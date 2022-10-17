@@ -44,7 +44,7 @@ return opcao3;
 }
 
 void cadastrar_chefe(void){
-char id_chefe[3];
+char id_chefe[4];
 char nome_chefe[20];
 char email_chefe[30];
 char cel_chefe[12];
@@ -70,7 +70,7 @@ getchar();
 }
 
 void verificar_chefe(void){
-char id_chefe[3];
+char id_chefe[4];
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -79,14 +79,14 @@ printf("|CADASTRADO!                                                |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O EMAIL DO CHEFE QUE DESEJA VERIFICAR:              |\n");
+printf("|DIGITE O ID DO CHEFE QUE DESEJA VERIFICAR:                 |\n");
 scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void editar_chefe(void){
-char id_chefe[30];
+char id_chefe[4];
 system ("clear||cls ");
 printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -94,14 +94,14 @@ printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O EMAIL DO CHEFE QUE SERA EDITADO:                  |\n");
+printf("|DIGITE O ID DO CHEFE QUE SERA EDITADO:                     |\n");
 scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
 void excluir_chefe(void){
-char id_chefe[30];
+char id_chefe[4];
 system ("clear||cls ");
 printf("|-=-=-=-              EXCLUIR CHEFE                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -109,7 +109,7 @@ printf("|EXCLUA AQUI TODAS AS INFORMACOES DO CHEFE QUE DESEJAR      |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-printf("|DIGITE O EMAIL DO CHEFE QUE SERA EXCLUIDO:                 |\n");
+printf("|DIGITE O ID DO CHEFE QUE SERA EXCLUIDO:                    |\n");
 scanf("%s", id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 

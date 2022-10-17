@@ -12,9 +12,7 @@ void moduloReceita(void){
         switch(escolha) {
             case '1':   moduloIngredientes();
                         break;
-            case '2':   moduloIngredientes();
-                        break;
-            case '3':   modoPreparo();
+            case '2':   modoPreparo();
                         break;
             
         } 	
@@ -27,9 +25,8 @@ char tela_receitas(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-           BEM VINDO A TELA RECEITA        -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-(1) ADICIONE INFORMACOES DA RECEITA-=--=-=-|\n");
-printf("|-=-=-=-=-=-=-=-=(2) ADICIONE INGREDIENTES-=-=-=-=--=-=-=-==|\n");
-printf("|-=-=-=-=-=-=-=-=(3) ADICIONE O MODO DE PREPARO-=-==-=-=-==-|\n");
+printf("|-=-=-=-=-=-(1) ADICIONE DADOS DA RECEITA E INGREDIENTES-=-=|\n");
+printf("|-=-=-=-=-=-(2) ADICIONE O MODO DE PREPARO-=-==-=-=--==--=-=|\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
