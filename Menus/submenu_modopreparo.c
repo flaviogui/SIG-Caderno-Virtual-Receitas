@@ -101,7 +101,7 @@ char id_receita[4];
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR MODO DE PREPARO         -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|EXCLUA AQUI O MODO DE PREPARO POR COMPLETO.                      |\n");
+printf("|EXCLUA AQUI O MODO DE PREPARO POR COMPLETO.                |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
