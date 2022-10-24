@@ -27,6 +27,19 @@ int validarCel(char* cel) {
     }
     return 1;
 }
+int validarID(char* ID) {
+    int t;
+    t = strlen(ID);
+    if (t != 3) {
+        return 0;
+    }
+    for (int i = 0; i < t; i++) {
+        if (!eiNumero(ID[i])) {
+            return 0;
+        }
+    }
+    return 1;
+}
 // VALIDAR NOME
 // CÓDIGO MODIFICADO DO COLEGA ISAYAN
 int validarNome(char* name){
