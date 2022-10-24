@@ -66,7 +66,7 @@ do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
 scanf("%s", cel);
 validadorTelefone = validarCel(cel);
-} while(validadorTelefone != 0);
+} while(validadorTelefone == 0);
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
 getchar();
