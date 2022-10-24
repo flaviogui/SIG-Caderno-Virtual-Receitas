@@ -51,7 +51,7 @@ char nome_chefe[20];
 char email_chefe[30];
 char cel[12];
 int validadorTelefone;
-char validadorNome;
+int validadorNome;
 system ("clear||cls ");
 printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
