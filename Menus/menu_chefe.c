@@ -3,6 +3,8 @@
 #include  <stdlib.h>
 #include "../Assinaturas/assin_chefe.h"
 #include "../Assinaturas/menus.h"
+#include "validacao.h"
+
 
 void moduloChefe(void){
     char escolha;
@@ -48,6 +50,7 @@ char id_chefe[4];
 char nome_chefe[20];
 char email_chefe[30];
 char cel_chefe[12];
+int validadorTelefone;
 system ("clear||cls ");
 printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -59,8 +62,11 @@ printf("DIGITE O NOME DO CHEFE:                                      \n");
 scanf("%s", nome_chefe);
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf("%s", email_chefe);
+do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
 scanf("%s", cel_chefe);
+validadorTelefone = validarCel(cel_chefe);
+} while(validadorTelefone != 0);
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
 getchar();
