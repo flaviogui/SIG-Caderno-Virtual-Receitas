@@ -3,6 +3,7 @@
 #include  <stdlib.h>
 #include "../Assinaturas/assin_ingredientes.h"
 #include "../Assinaturas/menus.h"
+#include "../validacao.h"
 
 void moduloIngredientes(void){
     char escolha;
@@ -52,6 +53,7 @@ char tempo_preparo[10];
 char nivel_dif[25];
 char porcoes[4];
 char ingredientes[300];
+int validadorNome;
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -63,8 +65,11 @@ printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
 printf("AGORA, DIGITE O ID DA RECEITA:                               \n");
 scanf("%s", id_receita);
+do{
 printf("DIGITE O NOME DA RECEITA:                                    \n");
 scanf("%s", nome_receita);
+validadorNome = validarNome(nome_receita);
+} while(validadorNome == 0);
 printf("DIGITE O TEMPO DE PREPARO DA RECEITA:                        \n");
 scanf("%s", tempo_preparo);
 printf("DIGITE O NIVEL DE DIFICULDADE DA RECEITA :                   \n");
