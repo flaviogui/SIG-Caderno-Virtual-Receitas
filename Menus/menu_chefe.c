@@ -52,6 +52,7 @@ char nome_chefe[50];
 char email_chefe[40];
 char cel[12];
 int validadorNome;
+int validadorEmail;
 int validadorTelefone;
 int validadorID;
 system ("clear||cls ");
@@ -68,8 +69,11 @@ scanf("%s", nome_chefe);
 validadorNome = validarNome(nome_chefe); 
 } while(validadorNome == 0);
 
+do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf("%s", email_chefe);
+validadorEmail = validarEmail(email_chefe);
+} while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
