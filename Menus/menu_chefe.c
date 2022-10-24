@@ -51,6 +51,7 @@ char nome_chefe[20];
 char email_chefe[30];
 char cel[12];
 int validadorTelefone;
+char validadorNome;
 system ("clear||cls ");
 printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -58,8 +59,11 @@ printf("|CADASTRE AQUI O CHEFE(USUARIO) RESPONSAVEL PELA ELABORACAO |\n");
 printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
 scanf("%s", nome_chefe);
+validadorNome = validarNome(nome_chefe); 
+} while(validadorNome == 0);
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf("%s", email_chefe);
 do{

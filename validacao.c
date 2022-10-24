@@ -27,3 +27,23 @@ int validarCel(char* cel) {
     }
     return 1;
 }
+// VALIDAR NOME
+// CÓDIGO MODIFICADO DO COLEGA ISAYAN
+int validarNome(char* name){
+    char letras[] = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚÂÊÔÇÀÃÕ.záéíóúâêôçàãõ";
+    int tam  = strlen(name);
+    int l;
+    int tamletras = strlen(letras);
+    for(int x = 0;x < tam;x++){
+        l = 0;
+        for(int y = 0;y < tamletras;y++){
+            if(name[x] == letras[y]){
+                l++;
+            }
+        }
+        if(l < 1){
+                return 0;
+        }
+    }
+    return 1;
+}
