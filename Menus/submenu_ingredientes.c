@@ -44,7 +44,7 @@ getchar();
 return opcao;
 }
 
-
+// AREA DO CREATE
 void cadastrar_alimento(void){
 char id_chefe[4];
 char id_receita[4];
@@ -54,6 +54,8 @@ char nivel_dif[25];
 char porcoes[4];
 char ingredientes[300];
 int validadorNome;
+int validadorID_chefe;
+int validadorID_receita;
 system ("clear||cls ");
 printf("|-=-=-=-           CADASTRAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -61,15 +63,25 @@ printf("|ADICIONE OS ALIMENTOS NECESSARIOS PARA ELABORAR SUA RECEITA|\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+
+do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
+validadorID_chefe = validarID(id_chefe);
+} while(validadorID_chefe == 0);
+
+do{
 printf("AGORA, DIGITE O ID DA RECEITA:                               \n");
 scanf("%s", id_receita);
+validadorID_receita = validarID(id_receita);
+} while(validadorID_receita == 0);
+
 do{
 printf("DIGITE O NOME DA RECEITA:                                    \n");
 scanf("%s", nome_receita);
 validadorNome = validarNome(nome_receita);
 } while(validadorNome == 0);
+
 printf("DIGITE O TEMPO DE PREPARO DA RECEITA:                        \n");
 scanf("%s", tempo_preparo);
 printf("DIGITE O NIVEL DE DIFICULDADE DA RECEITA :                   \n");
@@ -84,8 +96,10 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO READ
 void verificar_alimento(void){
 char id_receita[4];
+int validadorID_receita;
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE INGREDIENTE        -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -94,14 +108,19 @@ printf("|DISPONIVEL!                                                |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+do{
 printf("|DIGITE O ID DA RECEITA QUE DESEJA VERIFICAR:               |\n");
 scanf("%s", id_receita);
+validadorID_receita = validarID(id_receita);
+} while(validadorID_receita == 0);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO UPDATE
 void editar_alimento(void){
 char id_receita[4];
+int validadorID_receita;
 system ("clear||cls ");
 printf("|-=-=-=-              EDITAR INGREDIENTE           -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -109,14 +128,19 @@ printf("|AQUI SERA POSSIVEL EDITAR OU MODIFICAR INGREDIENTES        |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+do{
 printf("|DIGITE O ID DA RECEITA QUE SERA MODIFICADO:                |\n");
 scanf("%s", id_receita);
+validadorID_receita = validarID(id_receita);
+} while(validadorID_receita == 0);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO DELETE
 void excluir_alimento(void){
 char id_receita[4];
+int validadorID_receita;
 system ("clear||cls ");
 printf("|-=-=-=-           EXCLUIR INGREDIENTE             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -124,8 +148,11 @@ printf("|EXCLUA OS ALIMENTOS DESNECESSARIOS DA LISTA.               |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(5) VOLTAR AO MENU ALIMENTO-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+do{
 printf("|DIGITE O ID DA RECEITA QUE SERA EXCLUIDO:                  |\n");
-scanf("%s", id_receita); 
+scanf("%s", id_receita);
+validadorID_receita = validarID(id_receita);
+} while(validadorID_receita == 0); 
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }

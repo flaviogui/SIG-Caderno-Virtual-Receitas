@@ -45,10 +45,11 @@ getchar();
 return opcao3;
 }
 
+// AREA DE CREATE 
 void cadastrar_chefe(void){
 char id_chefe[4];
-char nome_chefe[20];
-char email_chefe[30];
+char nome_chefe[50];
+char email_chefe[40];
 char cel[12];
 int validadorNome;
 int validadorTelefone;
@@ -60,18 +61,22 @@ printf("|CADASTRE AQUI O CHEFE(USUARIO) RESPONSAVEL PELA ELABORACAO |\n");
 printf("|DA(S) RECEITA(S) CULINARIAS.                               |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
 scanf("%s", nome_chefe);
 validadorNome = validarNome(nome_chefe); 
 } while(validadorNome == 0);
+
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf("%s", email_chefe);
+
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
 scanf("%s", cel);
 validadorTelefone = validarCel(cel);
 } while(validadorTelefone == 0);
+
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
@@ -83,8 +88,10 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO READ
 void verificar_chefe(void){
 char id_chefe[4];
+int validadorID;
 system ("clear||cls ");
 printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -93,14 +100,20 @@ printf("|CADASTRADO!                                                |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+
+do{
 printf("|DIGITE O ID DO CHEFE QUE DESEJA VERIFICAR:                 |\n");
 scanf("%s", id_chefe);
+validadorID = validarID(id_chefe);
+} while(validadorID == 0);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO UPDATE
 void editar_chefe(void){
 char id_chefe[4];
+int validadorID;
 system ("clear||cls ");
 printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -108,14 +121,20 @@ printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+
+do{
 printf("|DIGITE O ID DO CHEFE QUE SERA EDITADO:                     |\n");
 scanf("%s", id_chefe);
+validadorID = validarID(id_chefe);
+} while(validadorID == 0);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
+// AREA DO DELETE
 void excluir_chefe(void){
 char id_chefe[4];
+int validadorID;
 system ("clear||cls ");
 printf("|-=-=-=-              EXCLUIR CHEFE                -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -123,8 +142,13 @@ printf("|EXCLUA AQUI TODAS AS INFORMACOES DO CHEFE QUE DESEJAR      |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
+do{
 printf("|DIGITE O ID DO CHEFE QUE SERA EXCLUIDO:                    |\n");
 scanf("%s", id_chefe);
+validadorID = validarID(id_chefe);
+} while(validadorID == 0);
+getchar();
+printf( " \t\t\t >>> CHEFE EXCLUIDO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
