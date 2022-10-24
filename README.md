@@ -7,4 +7,4 @@ DISCIPLINA: PROGRAMAÇÃO
 PROFESSOR E ORIENTADOR: DR. FLAVIUS GORGÔNIO       
 
 Comandos de Execução: 
-gcc -Wall  projetoculinaria.c Menus/*.c -o  execute 
+gcc -Wall projetoculinaria.c validacao.c  Menus/*.c -o execute

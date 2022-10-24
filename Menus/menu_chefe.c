@@ -3,7 +3,7 @@
 #include  <stdlib.h>
 #include "../Assinaturas/assin_chefe.h"
 #include "../Assinaturas/menus.h"
-#include "validacao.h"
+#include "../validacao.h"
 
 
 void moduloChefe(void){
@@ -49,7 +49,7 @@ void cadastrar_chefe(void){
 char id_chefe[4];
 char nome_chefe[20];
 char email_chefe[30];
-char cel_chefe[12];
+char cel[12];
 int validadorTelefone;
 system ("clear||cls ");
 printf("|-=-=-=-               CADASTRAR CHEFE             -=-=-=-=-|\n");
@@ -64,8 +64,8 @@ printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf("%s", email_chefe);
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
-scanf("%s", cel_chefe);
-validadorTelefone = validarCel(cel_chefe);
+scanf("%s", cel);
+validadorTelefone = validarCel(cel);
 } while(validadorTelefone != 0);
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf("%s", id_chefe);
