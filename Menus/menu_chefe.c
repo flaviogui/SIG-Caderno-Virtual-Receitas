@@ -33,7 +33,7 @@ struct tipo_chefe
    char email[40];
    char cel[12];
 };
-struct tipo_chefe Tipo_chefe;
+
 
 
 char tela_menu_chefe(void){
@@ -56,6 +56,7 @@ return opcao3;
 
 // AREA DE CREATE 
 void cadastrar_chefe(void){
+struct tipo_chefe Tipo_chefe;
 
 int validadorNome;
 int validadorEmail;
@@ -72,24 +73,44 @@ printf("|                                                           |\n");
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
 fgets(Tipo_chefe.nome,50,stdin);
+for (int x = 0; Tipo_chefe.nome[x] != '\0'; x++) {
+    if (Tipo_chefe.nome[x] == '\n') {
+      Tipo_chefe.nome[x] = '\0';
+    }
+  }
 validadorNome = validarNome(Tipo_chefe.nome); 
 } while(validadorNome == 0);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 fgets(Tipo_chefe.email,40,stdin);
+for (int x = 0; Tipo_chefe.email[x] != '\0'; x++) {
+    if (Tipo_chefe.email[x] == '\n') {
+      Tipo_chefe.email[x] = '\0';
+    }
+  }
 validadorEmail = validarEmail(Tipo_chefe.email);
 } while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
 fgets(Tipo_chefe.cel,12,stdin);
+for (int x = 0; Tipo_chefe.cel[x] != '\0'; x++) {
+    if (Tipo_chefe.cel[x] == '\n') {
+      Tipo_chefe.cel[x] = '\0';
+    }
+  }
 validadorTelefone = validarCel(Tipo_chefe.cel);
 } while(validadorTelefone == 0);
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
 fgets(Tipo_chefe.id,12,stdin);
+for (int x = 0; Tipo_chefe.id[x] != '\0'; x++) {
+    if (Tipo_chefe.id[x] == '\n') {
+      Tipo_chefe.id[x] = '\0';
+    }
+  }
 validadorID = validarID(Tipo_chefe.id);
 } while(validadorID == 0);
 getchar();
