@@ -26,6 +26,15 @@ void moduloChefe(void){
 
 
 }
+struct tipo_chefe
+{
+   char id[4];
+   char nome[50];
+   char email[40];
+   char cel[12];
+};
+struct tipo_chefe Tipo_chefe;
+
 
 char tela_menu_chefe(void){
 char opcao3;
@@ -47,10 +56,7 @@ return opcao3;
 
 // AREA DE CREATE 
 void cadastrar_chefe(void){
-char id_chefe[4];
-char nome_chefe[50];
-char email_chefe[40];
-char cel[12];
+
 int validadorNome;
 int validadorEmail;
 int validadorTelefone;
@@ -65,26 +71,26 @@ printf("|                                                           |\n");
 
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
-scanf("%s", nome_chefe);
-validadorNome = validarNome(nome_chefe); 
+fgets(Tipo_chefe.nome,50,stdin);
+validadorNome = validarNome(Tipo_chefe.nome); 
 } while(validadorNome == 0);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
-scanf("%s", email_chefe);
-validadorEmail = validarEmail(email_chefe);
+fgets(Tipo_chefe.email,40,stdin);
+validadorEmail = validarEmail(Tipo_chefe.email);
 } while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
-scanf("%s", cel);
-validadorTelefone = validarCel(cel);
+fgets(Tipo_chefe.cel,12,stdin);
+validadorTelefone = validarCel(Tipo_chefe.cel);
 } while(validadorTelefone == 0);
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-scanf("%s", id_chefe);
-validadorID = validarID(id_chefe);
+fgets(Tipo_chefe.id,12,stdin);
+validadorID = validarID(Tipo_chefe.id);
 } while(validadorID == 0);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
