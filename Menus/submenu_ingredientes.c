@@ -37,11 +37,11 @@ struct infor_receita
 
 struct ingredientes{
   char ingredientes[300];
-}
+};
 
 char tela_submenu_ingredientes(void){
 char opcao;
-system ("clear||cls ");
+system("clear||cls ");
 printf("|-=-=-=-             MENU INGREDIENTES             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-(1) ADICIONAR INGREDIENTE-=-=-=-=-=-=-=-=-=|\n");
 printf("|-=-=-=-=-=-=-=-=(2) VERIFICAR INGREDIENTE-=-=-=-==-=-=-==-=|\n");
@@ -79,6 +79,7 @@ for (int x = 0; Infor_receita.id_chefe[x] != '\0'; x++) {
     if (Infor_receita.id_chefe[x] == '\n') {
       Infor_receita.id_chefe[x] = '\0';
     }
+    }
 validadorID_chefe = validarID(Infor_receita.id_chefe);
 } while(validadorID_chefe == 0);
 
@@ -89,6 +90,7 @@ for (int x = 0; Infor_receita.id_receita[x] != '\0'; x++) {
     if (Infor_receita.id_receita[x] == '\n') {
       Infor_receita.id_receita[x] = '\0';
     }
+    }
 validadorID_receita = validarID(Infor_receita.id_receita);
 } while(validadorID_receita == 0);
 
@@ -98,6 +100,7 @@ fgets(Infor_receita.nome_receita,50,stdin);
 for (int x = 0; Infor_receita.nome_receita[x] != '\0'; x++) {
     if (Infor_receita.nome_receita[x] == '\n') {
       Infor_receita.nome_receita[x] = '\0';
+    }
     }
 validadorNome = validarNome(Infor_receita.nome_receita);
 } while(validadorNome == 0);
