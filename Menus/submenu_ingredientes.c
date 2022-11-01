@@ -96,7 +96,7 @@ validadorID_receita = validarID(Infor_receita.id_receita);
 
 do{
 printf("DIGITE O NOME DA RECEITA:                                    \n");
-fgets(Infor_receita.nome_receita,50,stdin);
+fgets(Infor_receita.nome_receita,51,stdin);
 for (int x = 0; Infor_receita.nome_receita[x] != '\0'; x++) {
     if (Infor_receita.nome_receita[x] == '\n') {
       Infor_receita.nome_receita[x] = '\0';
@@ -106,13 +106,13 @@ validadorNome = validarNome(Infor_receita.nome_receita);
 } while(validadorNome == 0);
 
 printf("DIGITE O TEMPO DE PREPARO DA RECEITA:                        \n");
-fgets(Infor_receita.tempo_preparo,10,stdin);
+fgets(Infor_receita.tempo_preparo,11,stdin);
 printf("DIGITE O NIVEL DE DIFICULDADE DA RECEITA :                   \n");
-fgets(Infor_receita.nivel_dif,25,stdin);
+fgets(Infor_receita.nivel_dif,26,stdin);
 printf("DIGITE A QUANTIDADE DE PORCOES DO PRATO:                     \n");
-fgets(Infor_receita.porcoes,4,stdin);
+fgets(Infor_receita.porcoes,5,stdin);
 printf("AGORA DIGITE OS INGREDIENTES PRESENTES NA RECEITA:           \n");
-fgets(Ingredientes.ingredientes,300,stdin);
+fgets(Ingredientes.ingredientes,301,stdin);
 getchar();
 printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");

@@ -72,7 +72,7 @@ printf("|                                                           |\n");
 
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
-fgets(Tipo_chefe.nome,50,stdin);
+fgets(Tipo_chefe.nome,51,stdin);
 for (int x = 0; Tipo_chefe.nome[x] != '\0'; x++) {
     if (Tipo_chefe.nome[x] == '\n') {
       Tipo_chefe.nome[x] = '\0';
@@ -83,7 +83,7 @@ validadorNome = validarNome(Tipo_chefe.nome);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
-fgets(Tipo_chefe.email,40,stdin);
+fgets(Tipo_chefe.email,41,stdin);
 for (int x = 0; Tipo_chefe.email[x] != '\0'; x++) {
     if (Tipo_chefe.email[x] == '\n') {
       Tipo_chefe.email[x] = '\0';
@@ -94,7 +94,7 @@ validadorEmail = validarEmail(Tipo_chefe.email);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
-fgets(Tipo_chefe.cel,12,stdin);
+fgets(Tipo_chefe.cel,13,stdin);
 for (int x = 0; Tipo_chefe.cel[x] != '\0'; x++) {
     if (Tipo_chefe.cel[x] == '\n') {
       Tipo_chefe.cel[x] = '\0';
