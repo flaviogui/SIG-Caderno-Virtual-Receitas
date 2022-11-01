@@ -28,7 +28,7 @@ void moduloChefe(void){
 }
 struct tipo_chefe
 {
-   char id[4];
+   char id_chefe[4];
    char nome[50];
    char email[40];
    char cel[12];
@@ -105,13 +105,13 @@ validadorTelefone = validarCel(Tipo_chefe.cel);
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-fgets(Tipo_chefe.id,12,stdin);
-for (int x = 0; Tipo_chefe.id[x] != '\0'; x++) {
-    if (Tipo_chefe.id[x] == '\n') {
-      Tipo_chefe.id[x] = '\0';
+fgets(Tipo_chefe.id_chefe,4,stdin);
+for (int x = 0; Tipo_chefe.id_chefe[x] != '\0'; x++) {
+    if (Tipo_chefe.id_chefe[x] == '\n') {
+      Tipo_chefe.id_chefe[x] = '\0';
     }
   }
-validadorID = validarID(Tipo_chefe.id);
+validadorID = validarID(Tipo_chefe.id_chefe);
 } while(validadorID == 0);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");

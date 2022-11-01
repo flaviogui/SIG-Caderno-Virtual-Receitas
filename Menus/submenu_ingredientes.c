@@ -25,6 +25,19 @@ void moduloIngredientes(void){
 
 
 }
+struct infor_receita
+{
+   char id_chefe[4];
+   char id_receita[4];
+   char nome_receita[50];
+   char tempo_preparo[10];
+   char nivel_dif[25];
+   char porcoes[4];
+};
+
+struct ingredientes{
+  char ingredientes[300];
+}
 
 char tela_submenu_ingredientes(void){
 char opcao;
@@ -46,13 +59,8 @@ return opcao;
 
 // AREA DO CREATE
 void cadastrar_alimento(void){
-char id_chefe[4];
-char id_receita[4];
-char nome_receita[50];
-char tempo_preparo[10];
-char nivel_dif[25];
-char porcoes[4];
-char ingredientes[300];
+struct infor_receita Infor_receita;
+struct ingredientes Ingredientes;
 int validadorNome;
 int validadorID_chefe;
 int validadorID_receita;
@@ -66,30 +74,42 @@ printf("|                                                           |\n");
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-scanf("%s", id_chefe);
-validadorID_chefe = validarID(id_chefe);
+fgets(Infor_receita.id_chefe,4,stdin);
+for (int x = 0; Infor_receita.id_chefe[x] != '\0'; x++) {
+    if (Infor_receita.id_chefe[x] == '\n') {
+      Infor_receita.id_chefe[x] = '\0';
+    }
+validadorID_chefe = validarID(Infor_receita.id_chefe);
 } while(validadorID_chefe == 0);
 
 do{
 printf("AGORA, DIGITE O ID DA RECEITA:                               \n");
-scanf("%s", id_receita);
-validadorID_receita = validarID(id_receita);
+fgets(Infor_receita.id_receita,4,stdin);
+for (int x = 0; Infor_receita.id_receita[x] != '\0'; x++) {
+    if (Infor_receita.id_receita[x] == '\n') {
+      Infor_receita.id_receita[x] = '\0';
+    }
+validadorID_receita = validarID(Infor_receita.id_receita);
 } while(validadorID_receita == 0);
 
 do{
 printf("DIGITE O NOME DA RECEITA:                                    \n");
-scanf("%s", nome_receita);
-validadorNome = validarNome(nome_receita);
+fgets(Infor_receita.nome_receita,50,stdin);
+for (int x = 0; Infor_receita.nome_receita[x] != '\0'; x++) {
+    if (Infor_receita.nome_receita[x] == '\n') {
+      Infor_receita.nome_receita[x] = '\0';
+    }
+validadorNome = validarNome(Infor_receita.nome_receita);
 } while(validadorNome == 0);
 
 printf("DIGITE O TEMPO DE PREPARO DA RECEITA:                        \n");
-scanf("%s", tempo_preparo);
+fgets(Infor_receita.tempo_preparo,10,stdin);
 printf("DIGITE O NIVEL DE DIFICULDADE DA RECEITA :                   \n");
-scanf("%s", nivel_dif);
+fgets(Infor_receita.nivel_dif,25,stdin);
 printf("DIGITE A QUANTIDADE DE PORCOES DO PRATO:                     \n");
-scanf("%s", porcoes);
+fgets(Infor_receita.porcoes,4,stdin);
 printf("AGORA DIGITE OS INGREDIENTES PRESENTES NA RECEITA:           \n");
-scanf("%s", ingredientes);
+fgets(Ingredientes.ingredientes,300,stdin);
 getchar();
 printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
@@ -135,7 +155,7 @@ validadorID_receita = validarID(id_receita);
 } while(validadorID_receita == 0);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
-}
+}   
 
 // AREA DO DELETE
 void excluir_alimento(void){
@@ -155,4 +175,4 @@ validadorID_receita = validarID(id_receita);
 } while(validadorID_receita == 0); 
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
-}
+  }    
