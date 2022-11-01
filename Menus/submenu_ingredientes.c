@@ -74,7 +74,7 @@ printf("|                                                           |\n");
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-fgets(Infor_receita.id_chefe,4,stdin);
+fgets(Infor_receita.id_chefe,5,stdin);
 for (int x = 0; Infor_receita.id_chefe[x] != '\0'; x++) {
     if (Infor_receita.id_chefe[x] == '\n') {
       Infor_receita.id_chefe[x] = '\0';
@@ -85,7 +85,7 @@ validadorID_chefe = validarID(Infor_receita.id_chefe);
 
 do{
 printf("AGORA, DIGITE O ID DA RECEITA:                               \n");
-fgets(Infor_receita.id_receita,4,stdin);
+fgets(Infor_receita.id_receita,5,stdin);
 for (int x = 0; Infor_receita.id_receita[x] != '\0'; x++) {
     if (Infor_receita.id_receita[x] == '\n') {
       Infor_receita.id_receita[x] = '\0';

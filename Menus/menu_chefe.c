@@ -105,7 +105,7 @@ validadorTelefone = validarCel(Tipo_chefe.cel);
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-fgets(Tipo_chefe.id_chefe,4,stdin);
+fgets(Tipo_chefe.id_chefe,5,stdin);
 for (int x = 0; Tipo_chefe.id_chefe[x] != '\0'; x++) {
     if (Tipo_chefe.id_chefe[x] == '\n') {
       Tipo_chefe.id_chefe[x] = '\0';
