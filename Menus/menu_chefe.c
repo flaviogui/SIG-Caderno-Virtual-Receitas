@@ -18,7 +18,9 @@ void moduloChefe(void){
                         gravaChefe(fulano);
                         free(fulano);
                         break;
-            case '2':   // em desenvolvimento
+            case '2':   fulano = buscaChefe();
+                        exibeChefe(fulano);
+                        free(fulano);
                         break;
             case '3':   editar_chefe();
                         break;
@@ -70,44 +72,28 @@ printf("|                                                           |\n");
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
 scanf(" %3[^\n]", aln->id_chefe);
-for (int x = 0; aln->id_chefe[x] != '\0'; x++) {
-    if (aln->id_chefe[x] == '\n') {
-      aln->id_chefe[x] = '\0';
-    }
-  }
+getchar();
 validadorID = validarID(aln->id_chefe);
 } while(validadorID == 0);
 
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
 scanf("%49[^\n]", aln->nome);
-for (int x = 0; aln->nome[x] != '\0'; x++) {
-    if (aln->nome[x] == '\n') {
-      aln->nome[x] = '\0';
-    }
-}
+getchar();
 validadorNome = validarNome(aln->nome); 
 } while(validadorNome == 0);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
 scanf(" %39[^\n]", aln->email);
-for (int x = 0; aln->email[x] != '\0'; x++) {
-    if (aln->email[x] == '\n') {
-      aln->email[x] = '\0';
-    }
-  }
+getchar(); 
 validadorEmail = validarEmail(aln->email);
 } while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
 scanf(" %11[^\n]", aln->cel);
-for (int x = 0; aln->cel[x] != '\0'; x++) {
-    if (aln->cel[x] == '\n') {
-      aln->cel[x] = '\0';
-    }
-  }
+getchar();
 validadorTelefone = validarCel(aln->cel);
 } while(validadorTelefone == 0);
 
@@ -131,6 +117,45 @@ void gravaChefe(Chefe* aln){
   fwrite(aln, sizeof(Chefe), 1, fp);
   fclose(fp);
 }
+
+Chefe* buscaChefe(void){
+  FILE* fp;
+  Chefe* aln;
+  char id;
+  printf("\n = Bascar Chefe = \n");
+  printf("Informe o ID do Chefe: ");
+  scanf("%s",&id);
+  aln = (Chefe*) malloc(sizeof(Chefe));
+  fp = fopen("chefe.dat", "rb");
+  if (fp == NULL){
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar este programa...\n");
+    exit(1);
+  }
+  while(!feof(fp)) {
+    fread(aln, sizeof(Chefe), 1, fp);
+    if ((aln->id_chefe == id) && (aln->status != 'x')) {
+      fclose(fp);
+      return aln;
+    }
+}
+  fclose(fp);
+  return NULL;
+  }
+
+void exibeChefe(Chefe* al) {
+  char situacao[20];
+  if ((al == NULL) || (al->status == 'x')) {
+    printf("\n= = = Chefe Inexistente = = =\n");
+  } else {
+    printf("\n= = = Chefe Cadastrado = = =\n");
+    printf("ID: %s\n", al->id_chefe);
+    printf("Nome do Chefe: %s\n", al->nome);
+    printf("Endereço eletrônico: %s\n", al->email);
+    printf("Telefone: %s\n", al->cel);
+  }
+}
+
 
 // AREA DO READ
 void verificar_chefe(void){
