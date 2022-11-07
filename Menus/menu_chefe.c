@@ -8,19 +8,16 @@
 
 
 void moduloChefe(void){
-    Chefe* fulano;
-    int escolha;
+    char escolha;
 
     do {
         escolha = tela_menu_chefe();
         switch(escolha) {
-            case '1':   fulano = preencheChefe();
-                        gravaChefe(fulano);
-                        free(fulano);
+            case '1':   Chefe = preencheChefe();
+                        gravaChefe(Chefe);
+                        free(Chefe);
                         break;
-            case '2':   fulano = buscaChefe();
-                        exibeChefe(fulano);
-                        free(fulano);
+            case '2':   // em desenvolvimento
                         break;
             case '3':   editar_chefe();
                         break;
@@ -29,15 +26,12 @@ void moduloChefe(void){
            
         } 	
     } while (escolha != '0');
-
-
 }
 
 
 
-
 char tela_menu_chefe(void){
-int opcao3;
+char opcao3;
 system ("clear||cls ");
 printf("|-=-=-=-         MENU CHEFE DE COZINHA             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-(1) CADASTRAR CHEFE  -=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -55,8 +49,7 @@ return opcao3;
 }
 
 // AREA DE CREATE 
-void cadastrar_chefe(void){
-struct tipo_chefe Tipo_chefe;
+void preencheChefe(void){
 
 int validadorNome;
 int validadorEmail;
@@ -116,7 +109,21 @@ validadorID = validarID(Chefe.id_chefe);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+aln->status = 'c';
+return aln;
 getchar(); 
+}
+
+void gravaChefe(Chefe){
+  FILE* fp;
+  fp = fopen("chefe.dat", "ab");
+  if(fp == NULL){
+    printf("OPS! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possivel continuar este programa...\n");
+    exit(1);
+  }
+  fwrite(aln, sizeof(Chefe), 1, fp);
+  fclose(fp);
 }
 
 // AREA DO READ
