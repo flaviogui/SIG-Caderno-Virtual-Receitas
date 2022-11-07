@@ -1,20 +1,26 @@
 // MENU CHEFE
 #include <stdio.h>
 #include  <stdlib.h>
+#include <string.h>
 #include "../Assinaturas/assin_chefe.h"
 #include "../Assinaturas/menus.h"
 #include "../validacao.h"
 
 
 void moduloChefe(void){
-    char escolha;
+    Chefe* fulano;
+    int escolha;
 
     do {
         escolha = tela_menu_chefe();
         switch(escolha) {
-            case '1':   cadastrar_chefe();
+            case '1':   fulano = preencheChefe();
+                        gravaChefe(fulano);
+                        free(fulano);
                         break;
-            case '2':   verificar_chefe();
+            case '2':   fulano = buscaChefe();
+                        exibeChefe(fulano);
+                        free(fulano);
                         break;
             case '3':   editar_chefe();
                         break;
@@ -26,18 +32,12 @@ void moduloChefe(void){
 
 
 }
-struct tipo_chefe
-{
-   char id_chefe[4];
-   char nome[50];
-   char email[40];
-   char cel[12];
-};
+
 
 
 
 char tela_menu_chefe(void){
-char opcao3;
+int opcao3;
 system ("clear||cls ");
 printf("|-=-=-=-         MENU CHEFE DE COZINHA             -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-(1) CADASTRAR CHEFE  -=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -72,46 +72,46 @@ printf("|                                                           |\n");
 
 do{
 printf("DIGITE O NOME DO CHEFE:                                      \n");
-fgets(Tipo_chefe.nome,51,stdin);
-for (int x = 0; Tipo_chefe.nome[x] != '\0'; x++) {
-    if (Tipo_chefe.nome[x] == '\n') {
-      Tipo_chefe.nome[x] = '\0';
+fgets(Chefe.nome,51,stdin);
+for (int x = 0; Chefe.nome[x] != '\0'; x++) {
+    if (Chefe.nome[x] == '\n') {
+      Chefe.nome[x] = '\0';
     }
   }
-validadorNome = validarNome(Tipo_chefe.nome); 
+validadorNome = validarNome(Chefe.nome); 
 } while(validadorNome == 0);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
-fgets(Tipo_chefe.email,41,stdin);
-for (int x = 0; Tipo_chefe.email[x] != '\0'; x++) {
-    if (Tipo_chefe.email[x] == '\n') {
-      Tipo_chefe.email[x] = '\0';
+fgets(Chefe.email,41,stdin);
+for (int x = 0; Chefe.email[x] != '\0'; x++) {
+    if (Chefe.email[x] == '\n') {
+      Chefe.email[x] = '\0';
     }
   }
-validadorEmail = validarEmail(Tipo_chefe.email);
+validadorEmail = validarEmail(Chefe.email);
 } while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
-fgets(Tipo_chefe.cel,13,stdin);
-for (int x = 0; Tipo_chefe.cel[x] != '\0'; x++) {
-    if (Tipo_chefe.cel[x] == '\n') {
-      Tipo_chefe.cel[x] = '\0';
+fgets(Chefe.cel,13,stdin);
+for (int x = 0; Chefe.cel[x] != '\0'; x++) {
+    if (Chefe.cel[x] == '\n') {
+      Chefe.cel[x] = '\0';
     }
   }
-validadorTelefone = validarCel(Tipo_chefe.cel);
+validadorTelefone = validarCel(Chefe.cel);
 } while(validadorTelefone == 0);
 
 do{
 printf("DIGITE O ID DO CHEFE:                                        \n");
-fgets(Tipo_chefe.id_chefe,5,stdin);
-for (int x = 0; Tipo_chefe.id_chefe[x] != '\0'; x++) {
-    if (Tipo_chefe.id_chefe[x] == '\n') {
-      Tipo_chefe.id_chefe[x] = '\0';
+fgets(Chefe.id_chefe,5,stdin);
+for (int x = 0; Chefe.id_chefe[x] != '\0'; x++) {
+    if (Chefe.id_chefe[x] == '\n') {
+      Chefe.id_chefe[x] = '\0';
     }
   }
-validadorID = validarID(Tipo_chefe.id_chefe);
+validadorID = validarID(Chefe.id_chefe);
 } while(validadorID == 0);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
