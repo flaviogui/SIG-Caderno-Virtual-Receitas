@@ -9,13 +9,14 @@
 
 void moduloChefe(void){
     char escolha;
+    Chefe* fulano;
 
     do {
         escolha = tela_menu_chefe();
         switch(escolha) {
-            case '1':   Chefe = preencheChefe();
-                        gravaChefe(Chefe);
-                        free(Chefe);
+            case '1':   fulano = preencheChefe();
+                        gravaChefe(fulano);
+                        free(fulano);
                         break;
             case '2':   // em desenvolvimento
                         break;
@@ -24,7 +25,8 @@ void moduloChefe(void){
             case '4':   excluir_chefe();
                         break;
            
-        } 	
+        }
+        	
     } while (escolha != '0');
 }
 
@@ -49,7 +51,9 @@ return opcao3;
 }
 
 // AREA DE CREATE 
-void preencheChefe(void){
+Chefe* preencheChefe(void){
+Chefe* aln;
+aln =(Chefe*)malloc(sizeof(Chefe));
 
 int validadorNome;
 int validadorEmail;
@@ -64,57 +68,59 @@ printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 
 do{
-printf("DIGITE O NOME DO CHEFE:                                      \n");
-fgets(Chefe.nome,51,stdin);
-for (int x = 0; Chefe.nome[x] != '\0'; x++) {
-    if (Chefe.nome[x] == '\n') {
-      Chefe.nome[x] = '\0';
+printf("DIGITE O ID DO CHEFE:                                        \n");
+scanf(" %3[^\n]", aln->id_chefe);
+for (int x = 0; aln->id_chefe[x] != '\0'; x++) {
+    if (aln->id_chefe[x] == '\n') {
+      aln->id_chefe[x] = '\0';
     }
   }
-validadorNome = validarNome(Chefe.nome); 
+validadorID = validarID(aln->id_chefe);
+} while(validadorID == 0);
+
+do{
+printf("DIGITE O NOME DO CHEFE:                                      \n");
+scanf("%49[^\n]", aln->nome);
+for (int x = 0; aln->nome[x] != '\0'; x++) {
+    if (aln->nome[x] == '\n') {
+      aln->nome[x] = '\0';
+    }
+}
+validadorNome = validarNome(aln->nome); 
 } while(validadorNome == 0);
 
 do{
 printf("DIGITE O EMAIL DO CHEFE:                                     \n");
-fgets(Chefe.email,41,stdin);
-for (int x = 0; Chefe.email[x] != '\0'; x++) {
-    if (Chefe.email[x] == '\n') {
-      Chefe.email[x] = '\0';
+scanf(" %39[^\n]", aln->email);
+for (int x = 0; aln->email[x] != '\0'; x++) {
+    if (aln->email[x] == '\n') {
+      aln->email[x] = '\0';
     }
   }
-validadorEmail = validarEmail(Chefe.email);
+validadorEmail = validarEmail(aln->email);
 } while(validadorEmail == 0);
 
 do{
 printf("DIGITE O TELEFONE DO CHEFE:                                  \n");
-fgets(Chefe.cel,13,stdin);
-for (int x = 0; Chefe.cel[x] != '\0'; x++) {
-    if (Chefe.cel[x] == '\n') {
-      Chefe.cel[x] = '\0';
+scanf(" %11[^\n]", aln->cel);
+for (int x = 0; aln->cel[x] != '\0'; x++) {
+    if (aln->cel[x] == '\n') {
+      aln->cel[x] = '\0';
     }
   }
-validadorTelefone = validarCel(Chefe.cel);
+validadorTelefone = validarCel(aln->cel);
 } while(validadorTelefone == 0);
 
-do{
-printf("DIGITE O ID DO CHEFE:                                        \n");
-fgets(Chefe.id_chefe,5,stdin);
-for (int x = 0; Chefe.id_chefe[x] != '\0'; x++) {
-    if (Chefe.id_chefe[x] == '\n') {
-      Chefe.id_chefe[x] = '\0';
-    }
-  }
-validadorID = validarID(Chefe.id_chefe);
-} while(validadorID == 0);
+
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-Chefe.status = 'c';
-return Chefe;
+aln->status = 'm';
+return aln;
 getchar(); 
 }
 
-void gravaChefe(Chefe){
+void gravaChefe(Chefe* aln){
   FILE* fp;
   fp = fopen("chefe.dat", "ab");
   if(fp == NULL){
@@ -122,7 +128,7 @@ void gravaChefe(Chefe){
     printf("Não é possivel continuar este programa...\n");
     exit(1);
   }
-  fwrite(Chefe, sizeof(Chefe), 1, fp);
+  fwrite(aln, sizeof(Chefe), 1, fp);
   fclose(fp);
 }
 

@@ -13,8 +13,8 @@ struct chefe
    char status;
 };
 
-struct chefe Chefe;
+typedef struct chefe Chefe;
 
-void preencheChefe(void);
-void gravaChefe(Chefe);
+Chefe* preencheChefe(void);
+void gravaChefe(Chefe*);
 
