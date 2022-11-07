@@ -109,8 +109,8 @@ validadorID = validarID(Chefe.id_chefe);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-aln->status = 'c';
-return aln;
+Chefe.status = 'c';
+return Chefe;
 getchar(); 
 }
 
@@ -122,7 +122,7 @@ void gravaChefe(Chefe){
     printf("Não é possivel continuar este programa...\n");
     exit(1);
   }
-  fwrite(aln, sizeof(Chefe), 1, fp);
+  fwrite(Chefe, sizeof(Chefe), 1, fp);
   fclose(fp);
 }
 
