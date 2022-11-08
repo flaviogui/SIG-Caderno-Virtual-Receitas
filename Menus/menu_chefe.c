@@ -123,6 +123,14 @@ Chefe* buscaChefe(void){
   Chefe* aln;
   char id[4];
   int retorno;
+  system ("clear||cls ");
+  printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|PESQUISE PELO CHEFE DESEJADA E VEJA SE O MESMO ESTA        |\n");
+  printf("|CADASTRADO!                                                |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
+  printf("|                                                           |\n");
   printf("\n = Bascar Chefe = \n");
   printf("Informe o ID do Chefe: ");
   scanf("%s",id);
@@ -133,10 +141,9 @@ Chefe* buscaChefe(void){
     printf("Não é possível continuar este programa...\n");
     exit(1);
   }
-  retorno = strcmp(id,aln->id_chefe);
   while(!feof(fp)) {
     fread(aln, sizeof(Chefe), 1, fp);
-
+    retorno = strcmp(id,aln->id_chefe);
     if ((retorno == 0) && (aln->status != 'x')) {
       fclose(fp);
       return aln;
@@ -153,9 +160,11 @@ void exibeChefe(Chefe* al) {
     printf("\n= = = Chefe Cadastrado = = =\n");
     printf("ID: %s\n", al->id_chefe);
     printf("Nome do Chefe: %s\n", al->nome);
-    printf("Endereço eletrônico: %s\n", al->email);
+    printf("Endereco Eletronico: %s\n", al->email);
     printf("Telefone: %s\n", al->cel);
+    getchar();
   }
+  getchar();
 }
 
 
