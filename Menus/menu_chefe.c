@@ -121,10 +121,11 @@ void gravaChefe(Chefe* aln){
 Chefe* buscaChefe(void){
   FILE* fp;
   Chefe* aln;
-  char id;
+  char id[4];
+  int retorno;
   printf("\n = Bascar Chefe = \n");
   printf("Informe o ID do Chefe: ");
-  scanf("%s",&id);
+  scanf("%s",id);
   aln = (Chefe*) malloc(sizeof(Chefe));
   fp = fopen("chefe.dat", "rb");
   if (fp == NULL){
@@ -132,9 +133,11 @@ Chefe* buscaChefe(void){
     printf("Não é possível continuar este programa...\n");
     exit(1);
   }
+  retorno = strcmp(id,aln->id_chefe);
   while(!feof(fp)) {
     fread(aln, sizeof(Chefe), 1, fp);
-    if ((aln->id_chefe == id) && (aln->status != 'x')) {
+
+    if ((retorno == 0) && (aln->status != 'x')) {
       fclose(fp);
       return aln;
     }
@@ -144,7 +147,6 @@ Chefe* buscaChefe(void){
   }
 
 void exibeChefe(Chefe* al) {
-  char situacao[20];
   if ((al == NULL) || (al->status == 'x')) {
     printf("\n= = = Chefe Inexistente = = =\n");
   } else {
