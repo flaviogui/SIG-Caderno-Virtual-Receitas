@@ -173,29 +173,6 @@ void exibeChefe(Chefe* al) {
   getchar();
 }
 
-
-// AREA DO READ
-void verificar_chefe(void){
-char id_chefe[4];
-int validadorID;
-system ("clear||cls ");
-printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|PESQUISE PELO CHEFE DESEJADA E VEJA SE O MESMO ESTA        |\n");
-printf("|CADASTRADO!                                                |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
-
-do{
-printf("|DIGITE O ID DO CHEFE QUE DESEJA VERIFICAR:                 |\n");
-scanf("%s", id_chefe);
-validadorID = validarID(id_chefe);
-} while(validadorID == 0);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
-}
-
 // AREA DO UPDATE
 void editar_chefe(void){
 char id_chefe[4];
