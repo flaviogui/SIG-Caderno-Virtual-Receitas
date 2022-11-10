@@ -118,11 +118,13 @@ void gravaChefe(Chefe* aln){
   fclose(fp);
 }
 
+// AREA DO READ
 Chefe* buscaChefe(void){
   FILE* fp;
   Chefe* aln;
   char id[4];
   int retorno;
+  int validadorID;
   system ("clear||cls ");
   printf("|-=-=-=          VERIFICACAO DE CHEFE              -=-=-=-=-|\n");
   printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -133,7 +135,11 @@ Chefe* buscaChefe(void){
   printf("|                                                           |\n");
   printf("\n = Bascar Chefe = \n");
   printf("Informe o ID do Chefe: ");
-  scanf("%s",id);
+  do{
+  scanf("%3[^\n]",id);
+  validadorID = validarID(id);
+} while(validadorID == 0);
+
   aln = (Chefe*) malloc(sizeof(Chefe));
   fp = fopen("chefe.dat", "rb");
   if (fp == NULL){
