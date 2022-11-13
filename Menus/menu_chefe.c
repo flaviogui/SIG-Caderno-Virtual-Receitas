@@ -162,6 +162,7 @@ Chefe* buscaChefe(void){
 void exibeChefe(Chefe* al) {
   if ((al == NULL) || (al->status == 'x')) {
     printf("\n= = = Chefe Inexistente = = =\n");
+    getchar();
   } else {
     printf("\n= = = Chefe Cadastrado = = =\n");
     printf("ID: %s\n", al->id_chefe);
@@ -241,7 +242,6 @@ void removerChefe(void){
   scanf("%3[^\n]",pesquisa);
   validadorID = validarID(pesquisa);
   } while(validadorID == 0);
-  getchar();
   aln = (Chefe*) malloc(sizeof(Chefe));
   achou = 0;
   while ((!achou)&&(fread(aln,sizeof(Chefe),1,fp))){
@@ -249,20 +249,20 @@ void removerChefe(void){
       achou = 1;
     }
   }
-
   if (achou){
     exibeChefe(aln);
-    getchar();
-    printf("Quer realmente deletar esse usuario (s/n)? ");
+    printf("Quer realmente deletar esse Chefe (S/N)? ");
     scanf("%c",&resposta);
     getchar();
     if(resposta == 's' || resposta == 'S'){
-      aln -> status = 'D';
+      aln -> status = 'x';
       fseek(fp,(-1)*sizeof(Chefe),SEEK_CUR);
       fwrite(aln,sizeof(Chefe),1,fp);
       printf("\nChefe deletado com sucesso!\n");
+      getchar();
     }else{
-      printf("\nOk, o usuario permanece cadastrado\n");
+      printf("\nO chefe permanece cadastrado\n");
+      getchar();
     }
   }else{
     printf("\nO usuario %s encontra-se inexistente...",pesquisa);
