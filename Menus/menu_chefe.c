@@ -195,27 +195,6 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
-// AREA COM LIXO DE CODIGO
-void excluir_chefe(void){
-char id_chefe[4];
-int validadorID;
-system ("clear||cls ");
-printf("|-=-=-=-              EXCLUIR CHEFE                -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|EXCLUA AQUI TODAS AS INFORMACOES DO CHEFE QUE DESEJAR      |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
-do{
-printf("|DIGITE O ID DO CHEFE QUE SERA EXCLUIDO:                    |\n");
-scanf("%s", id_chefe);
-validadorID = validarID(id_chefe);
-} while(validadorID == 0);
-getchar();
-printf( " \t\t\t >>> CHEFE EXCLUIDO COM SUCESSO!!!                \n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
-}
 
 // AREA DO DELETE
 void removerChefe(void){
