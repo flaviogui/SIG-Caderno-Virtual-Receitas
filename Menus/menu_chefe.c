@@ -217,7 +217,7 @@ getchar();
 }
 
 // AREA DO DELETE
-void removeChefe(void){
+void removerChefe(void){
   FILE* fp;
   Chefe* aln;
   int validadorID;
