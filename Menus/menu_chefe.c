@@ -24,7 +24,7 @@ void moduloChefe(void){
                         break;
             case '3':   editar_chefe();
                         break;
-            case '4':   excluir_chefe();
+            case '4':   removerChefe();
                         break;
            
         }
@@ -101,7 +101,7 @@ validadorTelefone = validarCel(aln->cel);
 getchar();
 printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-aln->status = 'm';
+aln->status = 'C';
 return aln;
 getchar(); 
 }
@@ -194,7 +194,7 @@ printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
 
-// AREA DO DELETE
+// AREA COM LIXO DE CODIGO
 void excluir_chefe(void){
 char id_chefe[4];
 int validadorID;
@@ -214,4 +214,59 @@ getchar();
 printf( " \t\t\t >>> CHEFE EXCLUIDO COM SUCESSO!!!                \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
+}
+
+// AREA DO DELETE
+void removeChefe(void){
+  FILE* fp;
+  Chefe* aln;
+  int validadorID;
+  int achou;
+  char resposta;
+  char pesquisa[4];
+  fp = fopen("chefe.dat","r+b");
+  if (fp==NULL){
+    printf("\nOps!Ocorreu um erro ao tentar abrir o arquivo!\nTente rodar o programa novamente...\n");
+    exit(1);
+  }
+  system ("clear||cls ");
+  printf("|-=-=-=-              EXCLUIR CHEFE                -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|EXCLUA AQUI TODAS AS INFORMACOES DO CHEFE QUE DESEJAR      |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
+  printf("|                                                           |\n");
+  do{
+  printf("|DIGITE O ID DO CHEFE QUE SERA EXCLUIDO:                    |\n");
+  scanf("%3[^\n]",pesquisa);
+  validadorID = validarID(pesquisa);
+  } while(validadorID == 0);
+  getchar();
+  aln = (Chefe*) malloc(sizeof(Chefe));
+  achou = 0;
+  while ((!achou)&&(fread(aln,sizeof(Chefe),1,fp))){
+    if((strcmp(aln->id_chefe,pesquisa)==0)&&(aln->status=='C')){
+      achou = 1;
+    }
+  }
+
+  if (achou){
+    exibeChefe(aln);
+    getchar();
+    printf("Quer realmente deletar esse usuario (s/n)? ");
+    scanf("%c",&resposta);
+    getchar();
+    if(resposta == 's' || resposta == 'S'){
+      aln -> status = 'D';
+      fseek(fp,(-1)*sizeof(Chefe),SEEK_CUR);
+      fwrite(aln,sizeof(Chefe),1,fp);
+      printf("\nChefe deletado com sucesso!\n");
+    }else{
+      printf("\nOk, o usuario permanece cadastrado\n");
+    }
+  }else{
+    printf("\nO usuario %s encontra-se inexistente...",pesquisa);
+  }
+  free(aln);
+  fclose(fp);
 }

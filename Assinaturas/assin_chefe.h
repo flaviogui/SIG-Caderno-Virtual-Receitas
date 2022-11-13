@@ -17,4 +17,5 @@ Chefe* preencheChefe(void);
 void gravaChefe(Chefe*);
 void exibeChefe (Chefe*);
 Chefe* buscaChefe(void);
+void removerChefe(void);
 
