@@ -174,28 +174,6 @@ void exibeChefe(Chefe* al) {
   getchar();
 }
 
-// LIXO DE CÓDIGO
-void editar_chefe(void){
-char id_chefe[4];
-int validadorID;
-system ("clear||cls ");
-printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
- 
-do{
-printf("|DIGITE O ID DO CHEFE QUE SERA EDITADO:                     |\n");
-scanf("%s", id_chefe);
-validadorID = validarID(id_chefe);
-} while(validadorID == 0);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
-}
-//
-
 // AREA DO UPDATE
 void editarChefe(void) {
   FILE* fp;
@@ -260,7 +238,7 @@ void editarChefe(void) {
       } while(validadorTelefone == 0);
 
       getchar();
-      aln->status = 'x';
+      aln->status = 'C';
       fseek(fp, (-1)*sizeof(Chefe), SEEK_CUR);
       fwrite(aln, sizeof(Chefe), 1, fp);
       printf("\nChefe editado com sucesso!!!\n");
