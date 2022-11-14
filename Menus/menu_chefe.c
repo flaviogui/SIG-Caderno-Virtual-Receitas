@@ -22,7 +22,7 @@ void moduloChefe(void){
                         exibeChefe(fulano);
                         free(fulano);
                         break;
-            case '3':   editar_chefe();
+            case '3':   editarChefe();
                         break;
             case '4':   removerChefe();
                         break;
@@ -174,7 +174,7 @@ void exibeChefe(Chefe* al) {
   getchar();
 }
 
-// AREA DO UPDATE
+// LIXO DE CÓDIGO
 void editar_chefe(void){
 char id_chefe[4];
 int validadorID;
@@ -185,7 +185,7 @@ printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
-
+ 
 do{
 printf("|DIGITE O ID DO CHEFE QUE SERA EDITADO:                     |\n");
 scanf("%s", id_chefe);
@@ -194,6 +194,90 @@ validadorID = validarID(id_chefe);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
+//
+
+// AREA DO UPDATE
+void editarChefe(void) {
+  FILE* fp;
+  Chefe* aln;
+  int achou;
+  char resp;
+  char pesquisa[4];
+  int validadorID;
+  int validadorNome;
+  int validadorEmail;
+  int validadorTelefone;
+  fp = fopen("chefe.dat", "r+b");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  system ("clear||cls ");
+  printf("|-=-=-=-           EDITAR INFORMACOES DO CHEFE     -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|AQUI SERA POSSIVEL EDITAR INFORMACOES DO CHEFE             |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU CHEFE   -=-=-=-=-=-=-=|\n");
+  printf("|                                                           |\n");
+  do{
+  printf("|DIGITE O ID DO CHEFE QUE SERA EDITADO:                     |\n");
+  scanf(" %3[^\n]", pesquisa);
+  validadorID = validarID(pesquisa);
+  } while(validadorID == 0);
+  aln = (Chefe*) malloc(sizeof(Chefe));
+  achou = 0;
+  while((!achou) && (fread(aln, sizeof(Chefe), 1, fp))) {
+   if ((strcmp(aln->id_chefe, pesquisa) == 0) && (aln->status == 'C')) {
+     achou = 1;
+   }
+  }
+  if (achou) {
+    exibeChefe(aln);
+    printf("Dese1ja realmente editar este chefe (S/N)? ");
+    scanf("%c", &resp);
+    getchar();
+    if (resp == 's' || resp == 'S') {      
+      do{
+      printf("Informe o nome do chefe: ");
+      scanf("%49[^\n]", aln->nome);
+      getchar();
+      validadorNome = validarNome(aln->nome); 
+      } while(validadorNome == 0);
+
+      do{
+      printf("Informe o email do chefe: ");
+      scanf(" %39[^\n]", aln->email);
+      getchar(); 
+      validadorEmail = validarEmail(aln->email);
+      } while(validadorEmail == 0);
+
+      do{
+      printf("Informe o telefone do chefe: ");
+      scanf(" %11[^\n]", aln->cel);
+      getchar();
+      validadorTelefone = validarCel(aln->cel);
+      } while(validadorTelefone == 0);
+
+      getchar();
+      aln->status = 'x';
+      fseek(fp, (-1)*sizeof(Chefe), SEEK_CUR);
+      fwrite(aln, sizeof(Chefe), 1, fp);
+      printf("\nChefe editado com sucesso!!!\n");
+      getchar();
+    } else {
+      printf("\nOk, os dados não foram alterados\n");
+      getchar();
+    }
+  } else {
+    printf("O Chefe de ID: %s não foi encontrado...\n", pesquisa);
+  }
+  free(aln);
+  fclose(fp);
+}
+
+
+
 
 
 // AREA DO DELETE
@@ -249,3 +333,4 @@ void removerChefe(void){
   free(aln);
   fclose(fp);
 }
+

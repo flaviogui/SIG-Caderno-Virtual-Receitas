@@ -1,6 +1,5 @@
 void moduloChefe(void);
-void editar_chefe(void);
-void excluir_chefe(void);
+
 
 struct chefe
 {
@@ -18,4 +17,5 @@ void gravaChefe(Chefe*);
 void exibeChefe (Chefe*);
 Chefe* buscaChefe(void);
 void removerChefe(void);
+void editarChefe(void);
 
