@@ -84,7 +84,7 @@ getchar();
 validadorNome = validarNome(aln->nome_receita); 
 } while(validadorNome == 0);
 
-printf("QUAL SERÁ O TEMPO DE PREPARO DA RECEITA:                       \n");
+printf("QUAL SERA O TEMPO DE PREPARO DA RECEITA:                       \n");
 scanf(" %9[^\n]", aln->tempo_preparo);
 getchar();
 
