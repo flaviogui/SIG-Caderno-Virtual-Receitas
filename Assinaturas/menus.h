@@ -1,5 +1,5 @@
 char tela_principal(void);
-char tela_submenu_ingredientes(void);
+char tela_submenu_dados(void);
 char tela_submenu_modopreparo(void);
 char tela_receitas(void);
 char tela_menu_chefe(void);

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include  <stdlib.h>
-#include "../Assinaturas/assin_ingredientes.h"
+#include "../Assinaturas/assin_dadosReceita.h"
 #include "../Assinaturas/assin_modopreparo.h"
 #include "../Assinaturas/menus.h"
 
@@ -10,7 +10,7 @@ void moduloReceita(void){
     do {
         escolha = tela_receitas();
         switch(escolha) {
-            case '1':   moduloIngredientes();
+            case '1':   moduloDados();
                         break;
             case '2':   modoPreparo();
                         break;
@@ -25,8 +25,8 @@ char tela_receitas(void){
 char opcao;
 system ("clear||cls ");
 printf("|-=-=-=-           BEM VINDO A TELA RECEITA        -=-=-=-=-|\n");
-printf("|-=-=-=-=-=-(1) ADICIONE DADOS DA RECEITA E INGREDIENTES-=-=|\n");
-printf("|-=-=-=-=-=-(2) ADICIONE O MODO DE PREPARO-=-==-=-=--==--=-=|\n");
+printf("|-=-=-=-=(1) ADICIONE OS DADOS DA RECEITA -=-=-=-=-=-=-=-=-=|\n");
+printf("|-=-=-=-=(2) ADICIONE O MODO DE PREPARO E OS INGREDIENTES-=-|\n");
 printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
