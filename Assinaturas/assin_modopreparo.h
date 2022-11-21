@@ -1,6 +1,4 @@
 void modoPreparo(void);
-void editar_modo(void);
-void excluir_modo(void);
 
 struct ingremodo
 {
@@ -15,5 +13,4 @@ Ingremodo* preencheReceita(void);
 void gravaReceita(Ingremodo*);
 void exibeReceita (Ingremodo*);
 Ingremodo* buscaReceita(void);
-void removerReceita(void);
 
