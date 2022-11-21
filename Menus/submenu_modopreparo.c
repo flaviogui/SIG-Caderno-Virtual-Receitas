@@ -1,6 +1,7 @@
 // SUB MENU MODO PREPARO
 #include <stdio.h>
-#include  <stdlib.h>
+#include <stdlib.h>
+#include <string.h>
 #include "../Assinaturas/assin_modopreparo.h"
 #include "../Assinaturas/menus.h"
 #include "../validacao.h"
@@ -16,7 +17,9 @@ void modoPreparo(void){
                         gravaReceita(receita);
                         free(receita);
                         break;
-            case '2':   verificar_modo();
+            case '2':   receita = buscaReceita();
+                        exibeReceita(receita);
+                        free(receita);
                         break;
             case '3':   editar_modo();
                         break;
@@ -34,8 +37,8 @@ char opcao2;
 system ("clear||cls ");
 printf("|-=-=-=-        INGREDIENTES E MODO DE PRAPARO     -=-=-=-=-|\n");
 printf("|-=-=-=-=(1) ADICIONAR INGREDIENTE E MODO DE PRAPARO-=-=-=-=|\n");
-printf("|-=-=-=-=(3) VERIFICAR INGREDIENTE E MODO DE PRAPARO-=-=-=-=|\n");
-printf("|-=-=-=-=(4) EDITAR INGREDIENTE E MODO DE PREPARO-=-=-=-=-=-|\n");
+printf("|-=-=-=-=(2) VERIFICAR INGREDIENTE E MODO DE PRAPARO-=-=-=-=|\n");
+printf("|-=-=-=-=(3) EDITAR INGREDIENTE E MODO DE PREPARO-=-=-=-=-=-|\n");
 printf("|-=-=-=-=(4) EXCLUIR INGREDIENTE E MODO DE PREPARO-=-=--=-=-|\n");
 printf("|-=-=-=-=(0) VOLTA AO MENU INICIAL -=-=-=-=-=-=-=-=-=-=-=-=-|\n");
 printf("|___________________________________________________________|\n");
@@ -65,17 +68,15 @@ scanf(" %3[^\n]", aln->id_receita);
 getchar();
 validadorID = validarID(aln->id_receita);
 } while(validadorID == 0);
-printf("|DIGITE OS INGREDIENTES QUE A RECEITA VAI POSSUIR:          |\n");
-scanf(" %399[^\n]", aln->ingrediente);
+printf("DIGITE OS INGREDIENTES QUE A RECEITA VAI POSSUIR:             \n");
+scanf(" %399[^.\n]", aln->ingrediente);
 getchar();
-printf("|AGORA DIGITE O MODO DE PREPARO DA RECEITA:                 |\n");
-scanf(" %999[^\n]", aln->modo);
+printf("AGORA DIGITE O MODO DE PREPARO DA RECEITA:                    \n");
+scanf(" %999[^.\n]", aln->modo);
 getchar();
 printf( " \t\t\t >>> MODO DE PREPARO CADASTRADO COM SUCESSO!!!       \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
-printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 aln->status = 'C';
 return aln;
 getchar();
@@ -89,32 +90,69 @@ void gravaReceita(Ingremodo* aln){
     printf("Não é possivel continuar este programa...\n");
     exit(1);
   }
-  fprintf(fp," \n",aln->id_receita);
-  fprintf(fp," \n",aln->ingrediente);
-  fprintf(fp," \n",aln->modo);
+  fprintf(fp,"ID da Receita: %s\n",aln->id_receita);
+  fprintf(fp,"Ingredientes: %s\n",aln->ingrediente);
+  fprintf(fp,"Modo de Preparo: %s\n",aln->modo);
   fclose(fp);
 }
 
 
 // AREA DO READ
-void verificar_modo(void){
-char id_receita[4];
-int validadorID_receita;
-system ("clear||cls ");
-printf("|-=-=-=    VERIFICAR INGREDIENTES DE MODO DE PREPARO    -=-=|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|PESQUISE PELOS INGREDIENTES E MODO DE PREPARO DESEJADO E   |\n");
-printf("|VEJA SE OS MESMOS ESTAO DISPONIVEIS!                       |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
+Ingremodo* buscaReceita(void){
+  FILE* fp;
+  Ingremodo* aln;
+  char id[4];
+  int retorno;
+  int validadorID;
+  char lixo[20];
+  system ("clear||cls ");
+  printf("|-=-=-=    VERIFICAR INGREDIENTES DE MODO DE PREPARO    -=-=|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|PESQUISE PELOS INGREDIENTES E MODO DE PREPARO DESEJADO E   |\n");
+  printf("|VEJA SE OS MESMOS ESTAO DISPONIVEIS!                       |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
+  printf("|                                                           |\n");
 do{
-printf("|DIGITE O ID DA RECEITA QUE DESEJA VERIFICAR:           |\n");
-scanf("%s", id_receita);
-validadorID_receita = validarID(id_receita);
-} while(validadorID_receita == 0);
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+printf("DIGITE O ID DA RECEITA QUE DESEJA VERIFICAR:                   \n");
+scanf("%3[^\n]", id);
+validadorID = validarID(id);
+} while(validadorID == 0);
+
+aln = (Ingremodo*) malloc(sizeof(Ingremodo));
+fp = fopen("receita.txt", "ra");
+if (fp == NULL){
+  printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+  printf("Não é possível continuar este programa...\n");
+  exit(1);
+  }
+
+while(!feof(fp)) {
+    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->id_receita);
+    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->ingrediente);
+    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->modo);
+    retorno = strcmp(id,aln->id_receita);
+    if ((retorno == 0) && (aln->status != 'x')) {
+      fclose(fp);
+      return aln;
+    }
+  }
+  fclose(fp);
+  return NULL;
+}
+
+void exibeReceita(Ingremodo* al) {
+  if ((al == NULL) || (al->status == 'x')) {
+    printf("\n= = = Receita Inexistente = = =\n");
+    getchar();
+  } else {
+    printf("\n= = = Receita Cadastrada = = =\n");
+    printf("ID da receita: %s\n", al->id_receita);
+    printf("Ingredientes: %s\n", al->ingrediente);
+    printf("Modo de preparo: %s\n", al->modo);
+    getchar();
+  }
+  getchar();
 }
 
 // AREA DO UPDATE

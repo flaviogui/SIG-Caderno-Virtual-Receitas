@@ -1,5 +1,4 @@
 void modoPreparo(void);
-void verificar_modo(void);
 void editar_modo(void);
 void excluir_modo(void);
 
@@ -14,4 +13,6 @@ struct ingremodo
 typedef struct ingremodo Ingremodo;
 Ingremodo* preencheReceita(void);
 void gravaReceita(Ingremodo*);
+void exibeReceita (Ingremodo*);
+Ingremodo* buscaReceita(void);
 
