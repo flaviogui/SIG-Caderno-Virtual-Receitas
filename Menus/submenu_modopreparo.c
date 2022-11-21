@@ -69,15 +69,14 @@ getchar();
 validadorID = validarID(aln->id_receita);
 } while(validadorID == 0);
 printf("DIGITE OS INGREDIENTES QUE A RECEITA VAI POSSUIR:             \n");
-scanf(" %399[^.\n]", aln->ingrediente);
+scanf(" %399[^.]", aln->ingrediente);
 getchar();
 printf("AGORA DIGITE O MODO DE PREPARO DA RECEITA:                    \n");
-scanf(" %999[^.\n]", aln->modo);
+scanf(" %999[^.]", aln->modo);
 getchar();
 printf( " \t\t\t >>> MODO DE PREPARO CADASTRADO COM SUCESSO!!!       \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
-aln->status = 'C';
 return aln;
 getchar();
 }
@@ -128,11 +127,11 @@ if (fp == NULL){
   }
 
 while(!feof(fp)) {
-    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->id_receita);
-    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->ingrediente);
-    fscanf(fp,"20%[^:] %c %s",lixo,lixo, aln->modo);
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->ingrediente);
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->modo);
     retorno = strcmp(id,aln->id_receita);
-    if ((retorno == 0) && (aln->status != 'x')) {
+    if (retorno == 0) {
       fclose(fp);
       return aln;
     }
@@ -142,7 +141,7 @@ while(!feof(fp)) {
 }
 
 void exibeReceita(Ingremodo* al) {
-  if ((al == NULL) || (al->status == 'x')) {
+  if (al == NULL) {
     printf("\n= = = Receita Inexistente = = =\n");
     getchar();
   } else {
@@ -194,3 +193,6 @@ validadorID_receitas = validarID(id_receita);
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
 }
+
+
+
