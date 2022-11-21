@@ -7,11 +7,14 @@
 
 void modoPreparo(void){
     char escolha;
+    Ingremodo* receita;
 
     do {
         escolha = tela_submenu_modopreparo();
         switch(escolha) {
-            case '1':   cadastrar_modo();
+            case '1':   receita = preencheReceita();
+                        gravaReceita(receita);
+                        free(receita);
                         break;
             case '2':   verificar_modo();
                         break;
@@ -45,10 +48,10 @@ return opcao2;
 }
 
 // AREA DO CREATE
-void cadastrar_modo(void){
-char id_receita[4];
-char modo_preparo[800];
-int validadorID_receita;
+Ingremodo* preencheReceita(void){
+Ingremodo* aln;
+aln =(Ingremodo*)malloc(sizeof(Ingremodo));
+int validadorID;
 system ("clear||cls ");
 printf("|-=-=-=-  CADASTRAR INGREDIENTE E MODO DE PREPARO  -=-=-=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -57,18 +60,41 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-=(0) VOLTAR AO MENU RECEITAS-=-=-=-=-=-=-=|\n");
 printf("|                                                           |\n");
 do{
-printf("|DIGITE O ID DA RECEITA:                                    |\n");
-scanf("%s", id_receita);
-validadorID_receita = validarID(id_receita);
-} while(validadorID_receita == 0);
-
-printf("|DIGITE O MODO DE PREPARO DA RECEITA:                       |\n");
-scanf("%s",modo_preparo);
+printf("DIGITE O ID DA RECEITA:                                       \n");
+scanf(" %3[^\n]", aln->id_receita);
+getchar();
+validadorID = validarID(aln->id_receita);
+} while(validadorID == 0);
+printf("|DIGITE OS INGREDIENTES QUE A RECEITA VAI POSSUIR:          |\n");
+scanf(" %399[^\n]", aln->ingrediente);
+getchar();
+printf("|AGORA DIGITE O MODO DE PREPARO DA RECEITA:                 |\n");
+scanf(" %999[^\n]", aln->modo);
 getchar();
 printf( " \t\t\t >>> MODO DE PREPARO CADASTRADO COM SUCESSO!!!       \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
 getchar(); 
+printf( " \t\t\t >>> CHEFE CADASTRADO COM SUCESSO!!!                \n");
+printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+aln->status = 'C';
+return aln;
+getchar();
 }
+
+void gravaReceita(Ingremodo* aln){
+  FILE* fp;
+  fp = fopen("receita.txt", "at");
+  if(fp == NULL){
+    printf("OPS! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possivel continuar este programa...\n");
+    exit(1);
+  }
+  fprintf(fp," \n",aln->id_receita);
+  fprintf(fp," \n",aln->ingrediente);
+  fprintf(fp," \n",aln->modo);
+  fclose(fp);
+}
+
 
 // AREA DO READ
 void verificar_modo(void){
