@@ -132,7 +132,7 @@ while(!feof(fp)) {
     }
   }
   fclose(fp);
-  return NULL;
+  return aln;
 }
 
 void exibeReceita(Ingremodo* al) {
