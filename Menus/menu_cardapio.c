@@ -62,9 +62,7 @@ void cafe(void) {
   printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM LANCHE PARA O SEU |\n");
   printf("|CAFE DA MANHA!                                             |\n");
   printf("|                                                           |\n");
-  printf("DIGITE (C) PARA VER TODAS AS OPCOES EM CAFE DA MANHA: ");
-  scanf("%c", &opcao);
-  getchar();  
+  opcao = 'C'; 
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
@@ -94,9 +92,7 @@ void almoco(void){
   printf("|                                                           |\n");
   printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
   printf("|                                                           |\n");
-  printf("DIGITE (A) PARA VER TODAS AS OPCOES EM CAFE ALMOCO: ");
-  scanf("%c", &opcao);
-  getchar();  
+  opcao = 'A';
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
@@ -125,9 +121,7 @@ void sobremesa(void){
   printf("|                                                           |\n");
   printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
   printf("|                                                           |\n");
-  printf("DIGITE (S) PARA VER TODAS AS OPCOES EM SOBREMESA: ");
-  scanf("%c", &opcao);
-  getchar();  
+  opcao = 'S';
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
@@ -157,9 +151,7 @@ void janta(void){
   printf("|                                                           |\n");
   printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
   printf("|                                                           |\n");
-  printf("DIGITE (J) PARA VER TODAS AS OPCOES EM JANTA: ");
-  scanf("%c", &opcao);
-  getchar();  
+  opcao = 'J';  
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
