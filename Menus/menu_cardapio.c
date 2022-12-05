@@ -3,6 +3,7 @@
 #include  <stdlib.h>
 #include "../Assinaturas/assin_cardapio.h"
 #include "../Assinaturas/menus.h"
+#include "../Assinaturas/assin_dadosReceita.h"
 
 void moduloCardapio(void){
     char escolha;
@@ -43,17 +44,35 @@ getchar();
 return opcao4; 
 }
 
-void cafe(void){
-system ("clear||cls ");
-printf("|-=-=-=            HORA DO CAFE DA MANHA           -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM LANCHE PARA O SEU |\n");
-printf("|CAFE DA MANHA!                                             |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
-printf("|                                                           |\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+
+void cafe(void) {
+  FILE* fp;
+  Dados* aln;
+  char opcao;
+  fp = fopen("dados.dat", "rb");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  printf("\n\n");
+  system ("clear||cls ");
+  printf("|-=-=-=            HORA DO CAFE DA MANHA           -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM LANCHE PARA O SEU |\n");
+  printf("|CAFE DA MANHA!                                             |\n");
+  printf("|                                                           |\n");
+  printf("DIGITE (C) PARA VER TODAS AS OPCOES EM CAFE DA MANHA: ");
+  scanf("%c", &opcao);
+  getchar();  
+  aln = (Dados*) malloc(sizeof(Dados));
+  while(fread(aln, sizeof(Dados), 1, fp)) {
+    if ((aln->opcao == opcao) && (aln->status == 'C')) {
+      exibeDados(aln);
+    }
+  }
+  fclose(fp);
+  free(aln);
 }
 
 

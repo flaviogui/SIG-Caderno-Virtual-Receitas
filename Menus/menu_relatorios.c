@@ -97,9 +97,6 @@ void relatorio_dados(void) {
 
 //RELATÓRIO DAS RECEITAS
 void relatorio_receitas(void){
-FILE* fp;
-Ingremodo* aln;
-char lixo[20];   
 system ("clear||cls ");
 printf("|-=-=   RELATORIO DOS INGREDIENTE E MODO DE PREPARO    -=-=-|\n");
 printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
@@ -109,22 +106,5 @@ printf("|                                                           |\n");
 printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
 printf("|                                                           |\n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-
-aln = (Ingremodo*) malloc(sizeof(Ingremodo));
-fp = fopen("receita.txt", "ra");
-if (fp == NULL){
-  printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-  printf("Não é possível continuar este programa...\n");
-  exit(1);
-  }
-
-while(!feof(fp)) {
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->ingrediente);
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->modo);
-    exibeReceita(aln);
-}
-  fclose(fp);
-  free(aln);
 }
 
