@@ -44,7 +44,7 @@ getchar();
 return opcao4; 
 }
 
-
+// CAFÉ DA MANHÃ
 void cafe(void) {
   FILE* fp;
   Dados* aln;
@@ -75,41 +75,97 @@ void cafe(void) {
   free(aln);
 }
 
-
+// ALMOÇO
 void almoco(void){
-system ("clear||cls ");
-printf("|-=-=-=               HORA DO ALMOCO               -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM COMIDA PARA O SEU |\n");
-printf("|ALMOCO!                                                    |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
-printf("|                                                           |\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+  FILE* fp;
+  Dados* aln;
+  char opcao;
+  fp = fopen("dados.dat", "rb");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  system ("clear||cls ");
+  printf("|-=-=-=               HORA DO ALMOCO               -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM COMIDA PARA O SEU |\n");
+  printf("|ALMOCO!                                                    |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+  printf("|                                                           |\n");
+  printf("DIGITE (A) PARA VER TODAS AS OPCOES EM CAFE ALMOCO: ");
+  scanf("%c", &opcao);
+  getchar();  
+  aln = (Dados*) malloc(sizeof(Dados));
+  while(fread(aln, sizeof(Dados), 1, fp)) {
+    if ((aln->opcao == opcao) && (aln->status == 'C')) {
+      exibeDados(aln);
+    }
+  }
+  fclose(fp);
+  free(aln);
 }
 
+// SOBREMESA
 void sobremesa(void){
-system ("clear||cls ");
-printf("|-=-=-=               HORA DA SOBREMESA            -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM SOBREMESA!        |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
-printf("|                                                           |\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+  FILE* fp;
+  Dados* aln;
+  char opcao;
+  fp = fopen("dados.dat", "rb");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  system ("clear||cls ");
+  printf("|-=-=-=               HORA DA SOBREMESA            -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM SOBREMESA!        |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+  printf("|                                                           |\n");
+  printf("DIGITE (S) PARA VER TODAS AS OPCOES EM SOBREMESA: ");
+  scanf("%c", &opcao);
+  getchar();  
+  aln = (Dados*) malloc(sizeof(Dados));
+  while(fread(aln, sizeof(Dados), 1, fp)) {
+    if ((aln->opcao == opcao) && (aln->status == 'C')) {
+      exibeDados(aln);
+    }
+  }
+  fclose(fp);
+  free(aln);
 }
 
+// JANTA
 void janta(void){
-system ("clear||cls ");
-printf("|-=-=-=               HORA DA JANTA                -=-=-=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM COMIDA PARA O SEU |\n");
-printf("|JANTA!                                                     |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
-printf("|                                                           |\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
-getchar(); 
+  FILE* fp;
+  Dados* aln;
+  char opcao;
+  fp = fopen("dados.dat", "rb");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  system ("clear||cls ");
+  printf("|-=-=-=               HORA DA JANTA                -=-=-=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|VEJA AQUI NO CARDAPIO TODAS AS OPCOES EM COMIDA PARA O SEU |\n");
+  printf("|JANTA!                                                     |\n");
+  printf("|                                                           |\n");
+  printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
+  printf("|                                                           |\n");
+  printf("DIGITE (J) PARA VER TODAS AS OPCOES EM JANTA: ");
+  scanf("%c", &opcao);
+  getchar();  
+  aln = (Dados*) malloc(sizeof(Dados));
+  while(fread(aln, sizeof(Dados), 1, fp)) {
+    if ((aln->opcao == opcao) && (aln->status == 'C')) {
+      exibeDados(aln);
+    }
+  }
+  fclose(fp);
+  free(aln);
 }

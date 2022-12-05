@@ -97,7 +97,7 @@ scanf(" %3[^\n]", aln->porcoes);
 getchar();
 
 printf("DIGITE C(CAFE DA MANHA, A(ALMOCO) S(SOBREMESA) OU J(JANTA):   \n");
-scanf("%c", aln->opcao);
+scanf("%c", &aln->opcao);
 getchar();
 printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
@@ -239,7 +239,7 @@ void editarDados(void) {
       getchar();
 
       printf("Informe C(cafe da manha), A(almoco) S(sobremesa) OU J(janta): ");
-      scanf("%c", aln->opcao);
+      scanf("%c", &aln->opcao);
       getchar();
       aln->status = 'C';
       fseek(fp, (-1)*sizeof(Dados), SEEK_CUR);
