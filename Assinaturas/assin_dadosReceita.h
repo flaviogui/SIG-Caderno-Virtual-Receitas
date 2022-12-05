@@ -9,7 +9,7 @@ struct dados
    char tempo_preparo[10];
    char nivel_dif[25];
    char porcoes[4];
-   char opcao[3];
+   char opcao;
    char status;
 };
 

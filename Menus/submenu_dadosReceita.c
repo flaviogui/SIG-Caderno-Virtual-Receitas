@@ -97,7 +97,7 @@ scanf(" %3[^\n]", aln->porcoes);
 getchar();
 
 printf("DIGITE C(CAFE DA MANHA, A(ALMOCO) S(SOBREMESA) OU J(JANTA):   \n");
-scanf(" %2[^\n]", aln->opcao);
+scanf("%c", aln->opcao);
 getchar();
 printf( " \t\t\t >>> INGREDIENTES CADASTRADOS COM SUCESSO!!!         \n");
 printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
@@ -172,7 +172,7 @@ void exibeDados(Dados* al) {
     printf("Tempo de Preparo da Receita:  %s\n", al->tempo_preparo);
     printf("Nivel de Dificuldade da Receita:  %s\n", al->nivel_dif);
     printf("Quantas Porcoes a Receita Possui:  %s\n", al->porcoes);
-    printf("C(CAFE DA MANHA, A(ALMOCO) S(SOBREMESA) OU J(JANTA):  %s\n", al->opcao);
+    printf("C(CAFE DA MANHA, A(ALMOCO) S(SOBREMESA) OU J(JANTA):  %c\n", al->opcao);
     getchar();
   }
   getchar();
@@ -239,7 +239,7 @@ void editarDados(void) {
       getchar();
 
       printf("Informe C(cafe da manha), A(almoco) S(sobremesa) OU J(janta): ");
-      scanf(" %2[^\n]", aln->opcao);
+      scanf("%c", aln->opcao);
       getchar();
       aln->status = 'C';
       fseek(fp, (-1)*sizeof(Dados), SEEK_CUR);
