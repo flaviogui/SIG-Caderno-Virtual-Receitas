@@ -85,8 +85,8 @@ void gravaReceita(Ingremodo* aln){
     exit(1);
   }
   fprintf(fp,"ID da Receita: %s\n",aln->id_receita);
-  fprintf(fp,"Ingredientes: %s\n",aln->ingrediente);
-  fprintf(fp,"Modo de Preparo: %s\n",aln->modo);
+  fprintf(fp,"Ingredientes: %s.\n",aln->ingrediente);
+  fprintf(fp,"Modo de Preparo: %s.\n",aln->modo);
   fclose(fp);
 }
 

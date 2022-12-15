@@ -117,11 +117,10 @@ void relatorio_receitas(void){
   aln = (Ingremodo*) malloc(sizeof(Ingremodo));
   while(!feof(fp)) {
     fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);   
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->ingrediente);
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->modo);
+    fscanf(fp,"%[^:] %c %[^.]",lixo,lixo, aln->ingrediente);
+    fscanf(fp,"%[^:] %c %[^.]",lixo,lixo, aln->modo);
     exibeReceita(aln);
   }
-  fclose(fp);
 }
   
 
