@@ -5,6 +5,7 @@
 #include "../Assinaturas/assin_dadosReceita.h"
 #include "../Assinaturas/menus.h"
 #include "../validacao.h"
+#include "../Assinaturas/assin_chefe.h"
 
 void moduloDados(void){
     char escolha;
@@ -313,4 +314,41 @@ void removerDados(void){
   }
   free(aln);
   fclose(fp);
+}
+
+void exibeDadosInter(Dados* al) {
+  if ((al == NULL) || (al->status == 'x')) {
+    printf("\n= = = Receita Inexistente = = =\n");
+    getchar();
+  } else {
+    int retorno;
+    FILE* fp;
+    Chefe* aln;
+    aln = (Chefe*) malloc(sizeof(Chefe));
+    fp = fopen("chefe.dat", "rb");
+    if (fp == NULL){
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar este programa...\n");
+    exit(1);
+  }
+    while(!feof(fp)) {
+    fread(aln, sizeof(Chefe), 1, fp);
+    retorno = strcmp(al->id_chefe,aln->id_chefe);
+    if ((retorno == 0) && (aln->status != 'x')) {
+      fclose(fp);
+    }
+}
+    fclose(fp);
+    printf("\n= = = Receita Verificada = = =\n");
+    printf("ID da receita: %s\n", al->id_receita);
+    printf("ID do Chefe: %s\n", al->id_chefe);
+    printf("Nome do Chefe:%s\n", aln->id_chefe);
+    printf("Nome do Chefe:%s\n", aln->id_chefe);
+    printf("Nome da Receita: %s\n", al->nome_receita);
+    printf("Tempo de Preparo da Receita:  %s\n", al->tempo_preparo);
+    printf("Nivel de Dificuldade da Receita:  %s\n", al->nivel_dif);
+    printf("Quantas Porcoes a Receita Possui:  %s\n", al->porcoes);
+    getchar();
+  }
+  getchar();
 }

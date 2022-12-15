@@ -21,3 +21,4 @@ void exibeDados (Dados*);
 Dados* buscaDados (void);
 void editarDados(void);
 void removerDados(void);
+void exibeDadosInter(Dados*);
