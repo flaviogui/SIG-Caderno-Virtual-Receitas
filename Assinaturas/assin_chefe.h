@@ -18,4 +18,3 @@ void exibeChefe (Chefe*);
 Chefe* buscaChefe(void);
 void removerChefe(void);
 void editarChefe(void);
-

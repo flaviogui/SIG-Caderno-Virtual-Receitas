@@ -122,7 +122,7 @@ if (fp == NULL){
   }
 
 while(!feof(fp)) {
-    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);   // Contribuição do colega Isayan
     fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->ingrediente);
     fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->modo);
     retorno = strcmp(id,aln->id_receita);

@@ -64,6 +64,7 @@ void relatorio_chefe(void) {
     if (aln->status == 'C') {
       exibeChefe(aln);
     }
+    getchar();
   }
   fclose(fp);
   free(aln);
@@ -97,14 +98,33 @@ void relatorio_dados(void) {
 
 //RELATÓRIO DAS RECEITAS
 void relatorio_receitas(void){
-system ("clear||cls ");
-printf("|-=-=   RELATORIO DOS INGREDIENTE E MODO DE PREPARO    -=-=-|\n");
-printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
-printf("|                                                           |\n");
-printf("|                                                           |\n");
-printf("|                                                           |\n");
-printf("|-=-=-=-=-=-=-=-=-(0) VOLTAR AO MENU CARDAPIO-=-=-=-=-=-=-=-|\n");
-printf("|                                                           |\n");
-printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+  FILE* fp;
+  Ingremodo* aln;
+  char lixo[20];
+  fp = fopen("receita.txt", "ra");
+  if (fp == NULL) {
+    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+    printf("Não é possível continuar o programa...\n");
+    exit(1);
+  }
+  printf("\n\n");
+  system ("clear||cls ");
+  printf("|-=-=   RELATORIO DOS INGREDIENTE E MODO DE PREPARO    -=-=-|\n");
+  printf("|-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=|\n");
+  printf("|                                                           |\n");
+  printf( " \t\t\t >>> Tecle <ENTER> para continuar...                 \n");
+
+  aln = (Ingremodo*) malloc(sizeof(Ingremodo));
+  while(!feof(fp)) {
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->id_receita);   
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->ingrediente);
+    fscanf(fp,"%[^:] %c %s",lixo,lixo, aln->modo);
+    exibeReceita(aln);
+  }
+  fclose(fp);
 }
+  
+
+
+
 
