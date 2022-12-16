@@ -6,6 +6,7 @@
 #include "../Assinaturas/menus.h"
 #include "../validacao.h"
 #include "../Assinaturas/assin_chefe.h"
+#include "../Assinaturas/assin_modopreparo.h"
 
 void moduloDados(void){
     char escolha;
@@ -338,12 +339,11 @@ void exibeDadosInter(Dados* al) {
       fclose(fp);
     }
 }
-    fclose(fp);
+  fclose(fp);
     printf("\n= = = Receita Verificada = = =\n");
     printf("ID da receita: %s\n", al->id_receita);
     printf("ID do Chefe: %s\n", al->id_chefe);
-    printf("Nome do Chefe:%s\n", aln->id_chefe);
-    printf("Nome do Chefe:%s\n", aln->id_chefe);
+    printf("Nome do Chefe:%s\n", aln->nome);
     printf("Nome da Receita: %s\n", al->nome_receita);
     printf("Tempo de Preparo da Receita:  %s\n", al->tempo_preparo);
     printf("Nivel de Dificuldade da Receita:  %s\n", al->nivel_dif);
