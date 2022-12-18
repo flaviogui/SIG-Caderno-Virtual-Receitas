@@ -317,38 +317,82 @@ void removerDados(void){
   fclose(fp);
 }
 
+// INTERLIGAÇÃO ENTRE ARQUIVOS
+
 void exibeDadosInter(Dados* al) {
   if ((al == NULL) || (al->status == 'x')) {
-    printf("\n= = = Receita Inexistente = = =\n");
+    printf("\n= = = Receita Inexistente = = =\n");           // Contribuicões da colega Dayanne Xavier
     getchar();
-  } else {
-    int retorno;
+  } 
+  
+  else {
+    int achou = 0;
+    int achou2 = 0;
+
     FILE* fp;
     Chefe* aln;
+
     aln = (Chefe*) malloc(sizeof(Chefe));
     fp = fopen("chefe.dat", "rb");
+
     if (fp == NULL){
-    printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
-    printf("Não é possível continuar este programa...\n");
-    exit(1);
-  }
-    while(!feof(fp)) {
-    fread(aln, sizeof(Chefe), 1, fp);
-    retorno = strcmp(al->id_chefe,aln->id_chefe);
-    if ((retorno == 0) && (aln->status != 'x')) {
-      fclose(fp);
+        printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+        printf("Nao e possivel continuar este programa...\n");
+        exit(1);
     }
-}
-  fclose(fp);
-    printf("\n= = = Receita Verificada = = =\n");
-    printf("ID da receita: %s\n", al->id_receita);
-    printf("ID do Chefe: %s\n", al->id_chefe);
-    printf("Nome do Chefe:%s\n", aln->nome);
-    printf("Nome da Receita: %s\n", al->nome_receita);
-    printf("Tempo de Preparo da Receita:  %s\n", al->tempo_preparo);
-    printf("Nivel de Dificuldade da Receita:  %s\n", al->nivel_dif);
-    printf("Quantas Porcoes a Receita Possui:  %s\n", al->porcoes);
-    getchar();
+
+    while ((!achou) && (fread(aln,sizeof(Chefe),1,fp))){
+      achou = 1;
+    }
+
+    fclose(fp); 
+
+    FILE* arq;
+    Ingremodo* pesq;
+    char lixo[20];
+    int retorno;
+    pesq = (Ingremodo*) malloc(sizeof(Ingremodo));
+    arq = fopen("receita.txt", "ra");
+
+    if (arq == NULL){
+        printf("Ops! Ocorreu um erro na abertura do arquivo!\n");
+        printf("Nao e possivel continuar este programa...\n");
+        exit(1);
+    }
+
+    while(!feof(arq) && !achou2) {
+        fscanf(arq,"%[^:] %c %s",lixo,lixo, pesq->id_receita);   // Contribuição do colega Isayan
+        fscanf(arq,"%[^:] %c %s",lixo,lixo, pesq->ingrediente);
+        fscanf(arq,"%[^:] %c %s",lixo,lixo, pesq->modo);
+        retorno = strcmp(pesq->id_receita,al->id_receita);
+
+        if (retorno == 0) {
+            achou2 = 1;
+            
+        } 
+    
+    }  
+    
+    fclose(arq);
+
+    if((achou == 1) && (achou2 == 1)){
+
+        printf("\n= = = Receita Verificada = = =\n");
+        printf("ID da receita: %s\n", al->id_receita);
+        printf("ID do Chefe: %s\n", al->id_chefe);
+        printf("Nome do Chefe:%s\n", aln->nome);
+        printf("Nome da Receita: %s\n", al->nome_receita);
+        printf("Tempo de Preparo da Receita:  %s\n", al->tempo_preparo);
+        printf("Nivel de Dificuldade da Receita:  %s\n", al->nivel_dif);
+        printf("Quantas Porcoes a Receita Possui:  %s\n", al->porcoes);
+        printf("Ingredientes: %s\n", pesq->ingrediente);
+        printf("Modo de preparo: %s\n", pesq->modo);
+        getchar();
+    } 
   }
-  getchar();
 }
+
+    
+      
+
+

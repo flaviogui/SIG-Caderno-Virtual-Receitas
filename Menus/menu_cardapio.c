@@ -125,7 +125,7 @@ void sobremesa(void){
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
-      exibeDados(aln);
+      exibeDadosInter(aln);
     }
   }
   fclose(fp);
@@ -155,7 +155,7 @@ void janta(void){
   aln = (Dados*) malloc(sizeof(Dados));
   while(fread(aln, sizeof(Dados), 1, fp)) {
     if ((aln->opcao == opcao) && (aln->status == 'C')) {
-      exibeDados(aln);
+      exibeDadosInter(aln);
     }
   }
   fclose(fp);
