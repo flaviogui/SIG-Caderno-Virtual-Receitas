@@ -1,5 +1,5 @@
 # CADERNO VIRTUAL DE RECEITAS
-Projeto de um caderno virtual de receita culinárias desenvolvido na disciplina de Programação.
+Projeto de um caderno virtual de receita culinárias desenvolvido na disciplina de Programação. \n
 EQUIPE: FLÁVIO GLAYDSON E MATHEUS QUIRINO
 ESTUDANTES DO CURSO DE SISTEMAS DE INFORMAÇÃO - UFRN
 2º SEMESTRE
